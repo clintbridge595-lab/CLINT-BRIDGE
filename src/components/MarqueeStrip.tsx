@@ -4,6 +4,7 @@ interface MarqueeStripProps {
   items?: string[];
   className?: string;
   speed?: 'normal' | 'fast';
+  style?: React.CSSProperties;
 }
 
 const defaultMarqueeItems = [
@@ -20,6 +21,7 @@ const defaultMarqueeItems = [
 export const MarqueeStrip: React.FC<MarqueeStripProps> = ({
   items = defaultMarqueeItems,
   className = '',
+  style,
 }) => {
   // Duplicate array 3 times for a seamless infinite loop
   const displayItems = [...items, ...items, ...items];
@@ -33,6 +35,7 @@ export const MarqueeStrip: React.FC<MarqueeStripProps> = ({
         fontStyle: 'italic',
         backgroundColor: '#264b23',
         color: '#ffffff',
+        ...style,
       }}
       aria-label="Agency capabilities ticker"
     >

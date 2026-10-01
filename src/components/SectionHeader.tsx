@@ -9,6 +9,7 @@ interface SectionHeaderProps {
   className?: string;
   titleStyle?: React.CSSProperties;
   subtitleStyle?: React.CSSProperties;
+  showLabelText?: boolean;
 }
 
 export const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -20,6 +21,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   className = '',
   titleStyle,
   subtitleStyle,
+  showLabelText = true,
 }) => {
   const isCentered = align === 'center';
 
@@ -27,18 +29,24 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     <div className={`mb-12 md:mb-16 ${isCentered ? 'text-center max-w-2xl mx-auto' : 'max-w-xl'} ${className}`}>
       {/* Signature tiny lime+dark double-circle badge - rendered only when label is present */}
       {label && (
-        <div className={`inline-flex items-center gap-2 mb-3.5 ${isCentered ? 'justify-center' : 'justify-start'}`}>
+        <div
+          className={`inline-flex items-center gap-2 mb-3.5 ${
+            isCentered ? 'justify-center' : 'justify-start'
+          } ${showLabelText === false ? 'hidden' : ''}`}
+        >
           <span className="relative flex h-3.5 w-3.5 items-center justify-center">
             <span className="absolute h-3.5 w-3.5 rounded-full bg-[#C6FF1A] opacity-80" />
             <span className="relative h-1.5 w-1.5 rounded-full bg-[#254A34]" />
           </span>
-          <span
-            className={`text-xs md:text-sm font-semibold tracking-wider uppercase ${
-              isDark ? 'text-[#C6FF1A]' : 'text-[#254A34]'
-            }`}
-          >
-            {label}
-          </span>
+          {showLabelText && (
+            <span
+              className={`text-xs md:text-sm font-semibold tracking-wider uppercase ${
+                isDark ? 'text-[#C6FF1A]' : 'text-[#254A34]'
+              }`}
+            >
+              {label}
+            </span>
+          )}
         </div>
       )}
 

@@ -19,10 +19,20 @@ export const WorkShowcase: React.FC = () => {
     <section id="work" className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          label="Our Work"
           title="Work That Drives Results"
           subtitle="Explore live production websites engineered and deployed by Client Bridge for local and growing enterprises."
           align="center"
+          titleStyle={{
+            fontFamily: 'Georgia',
+            fontStyle: 'italic',
+            fontWeight: 'normal',
+            fontSize: '39px',
+          }}
+          subtitleStyle={{
+            fontFamily: 'Times New Roman',
+            fontSize: '15px',
+            fontStyle: 'normal',
+          }}
         />
 
         {/* 2x2 Grid of White Rounded Cards */}

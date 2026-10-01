@@ -19,13 +19,27 @@ export const Faq: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4]">
+    <section
+      id="faq"
+      className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4]"
+      style={{
+        fontFamily: 'Georgia',
+        fontStyle: 'italic',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          label="FAQs"
           title="Questions? Look here."
           subtitle="Honest, straightforward answers about our timelines, costs, and project handoff."
           align="center"
+          titleStyle={{
+            fontFamily: 'Georgia',
+            fontSize: '37px',
+          }}
+          subtitleStyle={{
+            fontFamily: 'Times New Roman',
+            fontSize: '17px',
+          }}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -63,7 +77,10 @@ export const Faq: React.FC = () => {
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 sm:px-8 pb-6 text-sm text-slate-200 leading-relaxed border-t border-[#31503D]/60 pt-4 animate-in fade-in duration-200">
+                    <div
+                      className="px-6 sm:px-8 pb-6 text-slate-200 leading-relaxed border-t border-[#31503D]/60 pt-4 animate-in fade-in duration-200"
+                      style={{ fontSize: '13px' }}
+                    >
                       {faq.answer}
                     </div>
                   )}
@@ -76,7 +93,10 @@ export const Faq: React.FC = () => {
           <div className="lg:col-span-4 space-y-5">
             {/* Dark Green Card with Lime Chat Icon & Lime "Contact Us" Button */}
             <div className="bg-[#254A34] text-white p-7 sm:p-8 rounded-3xl border border-[#1F3B2B] shadow-md">
-              <div className="w-12 h-12 rounded-2xl bg-[#C6FF1A] text-[#0F1A14] flex items-center justify-center mb-5 shadow-sm">
+              <div
+                className="w-12 h-12 rounded-2xl text-[#0F1A14] flex items-center justify-center mb-5 shadow-sm"
+                style={{ backgroundColor: '#c4e35d' }}
+              >
                 <MessageCircle className="w-6 h-6 stroke-[2.2]" />
               </div>
 
@@ -90,7 +110,8 @@ export const Faq: React.FC = () => {
 
               <button
                 onClick={handleContactWhatsApp}
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#C6FF1A] hover:bg-[#b8f014] text-[#0F1A14] text-xs sm:text-sm font-bold py-3.5 px-6 rounded-full shadow-sm transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="w-full inline-flex items-center justify-center gap-2 hover:bg-[#b8f014] text-[#0F1A14] text-xs sm:text-sm font-bold py-3.5 px-6 rounded-full shadow-sm transition-all duration-200 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                style={{ backgroundColor: '#98bd3c' }}
               >
                 <span>Contact Us</span>
                 <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
@@ -99,7 +120,10 @@ export const Faq: React.FC = () => {
 
             {/* Light Card with Phone Icon & "24/7 Service" */}
             <div className="bg-[#FAF7EF] p-7 sm:p-8 rounded-3xl border border-[#E3E4E4] shadow-xs flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#254A34] text-[#C6FF1A] flex items-center justify-center shrink-0">
+              <div
+                className="w-12 h-12 rounded-2xl text-[#C6FF1A] flex items-center justify-center shrink-0"
+                style={{ backgroundColor: '#136238' }}
+              >
                 <Phone className="w-5 h-5 stroke-[2.2]" />
               </div>
               <div>
@@ -109,6 +133,7 @@ export const Faq: React.FC = () => {
                 <a
                   href="tel:03112713755"
                   className="font-display text-xl sm:text-2xl font-extrabold text-[#0F1A14] hover:text-[#254A34] transition-colors"
+                  style={{ fontFamily: 'Times New Roman' }}
                 >
                   0311-2713755
                 </a>

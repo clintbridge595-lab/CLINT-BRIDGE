@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
+import { getAssetUrl } from '../utils/asset';
 
 export const QuoteForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -239,24 +240,13 @@ _Sent from clintbridge.com_`;
               {/* Tall Rounded Grayscale Photo */}
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 h-[480px] sm:h-[540px]">
                 <img
-                  src="/images/quote.jpg"
+                  src={getAssetUrl('images/quote.jpg')}
                   alt="Client Bridge consultant discussing project strategy"
                   width="500"
                   height="700"
                   className="w-full h-full object-cover photo-grayscale"
                   loading="lazy"
                 />
-              </div>
-
-              {/* Overlapping Info Card */}
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl border border-[#E3E4E4] shadow-md max-w-xs">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#1FA866] animate-pulse" />
-                  <span className="text-xs font-bold text-[#0F1A14]">Instant Response</span>
-                </div>
-                <p className="text-xs text-[#5F6B64]">
-                  Direct WhatsApp connection with our Karachi lead developers.
-                </p>
               </div>
 
               {/* Lime Sparkle Stars at the Bottom-Right Corner */}

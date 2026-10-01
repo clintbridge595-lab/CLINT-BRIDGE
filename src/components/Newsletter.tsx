@@ -18,7 +18,13 @@ export const Newsletter: React.FC = () => {
       <MarqueeStrip />
 
       {/* Main Newsletter Section in soft grey */}
-      <section className="bg-[#F3F3F3] py-16 sm:py-20 border-b border-[#E3E4E4]">
+      <section
+        className="bg-[#F3F3F3] py-16 sm:py-20 border-b border-[#E3E4E4]"
+        style={{
+          fontFamily: 'Georgia',
+          fontStyle: 'italic',
+        }}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-wider text-[#254A34] mb-2 block">
             Direct Agency Insights
@@ -68,7 +74,7 @@ export const Newsletter: React.FC = () => {
       </section>
 
       {/* Bottom Marquee Strip */}
-      <MarqueeStrip />
+      <MarqueeStrip style={{ height: '37.3229px' }} />
     </div>
   );
 };

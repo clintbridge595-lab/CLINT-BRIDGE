@@ -10,13 +10,31 @@ export const Pricing: React.FC = () => {
   };
 
   return (
-    <section id="pricing" className="py-20 lg:py-28 bg-[#F3F3F3] border-b border-[#E3E4E4]">
+    <section
+      id="pricing"
+      className="py-20 lg:py-28 bg-[#F3F3F3] border-b border-[#E3E4E4]"
+      style={{
+        fontFamily: 'Georgia',
+        fontStyle: 'italic',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          label="Pricing"
           title="Simple Packages. Clear Value."
           subtitle="Fixed transparent investments with no surprise hourly charges. High impact websites engineered for local and international growth."
           align="center"
+          titleStyle={{
+            fontFamily: 'Georgia',
+            fontStyle: 'italic',
+            fontSize: '39px',
+            fontWeight: 'normal',
+          }}
+          subtitleStyle={{
+            fontFamily: 'Times New Roman',
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            fontSize: '13px',
+          }}
         />
 
         {/* 3 Pricing Cards */}

@@ -8,14 +8,29 @@ export const Insights: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<InsightItem | null>(null);
 
   return (
-    <section className="bg-[#254A34] text-white py-20 lg:py-28 border-b border-[#1F3B2B]">
+    <section
+      className="bg-[#254A34] text-white py-20 lg:py-28 border-b border-[#1F3B2B]"
+      style={{
+        fontFamily: 'Georgia',
+        fontStyle: 'italic',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          label="News & Insights"
           title="Our Latest News & Insights"
           subtitle="Tactical blueprints on conversion design, local map rankings, and direct sales channels in Pakistan."
           align="center"
           isDark={true}
+          titleStyle={{
+            fontFamily: 'Georgia',
+            fontWeight: 'normal',
+            fontSize: '37px',
+          }}
+          subtitleStyle={{
+            fontFamily: 'Times New Roman',
+            fontSize: '16px',
+            color: '#ffffff',
+          }}
         />
 
         {/* 3 Insights Cards */}

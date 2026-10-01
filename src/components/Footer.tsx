@@ -33,10 +33,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* Top Row: "Let's Connect there" with Dark Pill "Contact Us" */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-12 border-b border-[#E3E4E4]">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#254A34] block mb-1">
-              Start The Conversation
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F1A14] tracking-tight">
+            <h2
+              className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F1A14] tracking-tight"
+              style={{
+                fontFamily: 'Georgia',
+                fontStyle: 'italic',
+              }}
+            >
               Let's Connect there
             </h2>
           </div>
@@ -53,7 +56,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         {/* 4 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 py-12">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 py-12"
+          style={{
+            fontFamily: 'Georgia',
+            fontStyle: 'italic',
+          }}
+        >
           {/* Col 1: Logo + Short description + Lime circle social icons (5 cols) */}
           <div className="lg:col-span-5">
             <LogoBadge size="lg" className="mb-4" />
@@ -68,7 +77,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 href="https://www.facebook.com/share/1V5Cuj6SrG/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#C6FF1A] text-[#0F1A14] flex items-center justify-center shadow-xs hover:scale-105 transition-transform"
+                className="w-10 h-10 rounded-full text-[#0F1A14] flex items-center justify-center shadow-xs hover:scale-105 transition-transform"
+                style={{ backgroundColor: '#ecf8ff' }}
                 aria-label="Facebook page"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -81,7 +91,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 href="https://www.instagram.com/clintbridgeagency"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#C6FF1A] text-[#0F1A14] flex items-center justify-center shadow-xs hover:scale-105 transition-transform"
+                className="w-10 h-10 rounded-full text-[#0F1A14] flex items-center justify-center shadow-xs hover:scale-105 transition-transform"
+                style={{ backgroundColor: '#e1fcc8' }}
                 aria-label="Instagram profile"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -94,7 +105,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 href="https://wa.me/923112713755"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#1FA866] text-white flex items-center justify-center shadow-xs hover:scale-105 transition-transform"
+                className="w-10 h-10 rounded-full text-white flex items-center justify-center shadow-xs hover:scale-105 transition-transform"
+                style={{ backgroundColor: '#4bb572' }}
                 aria-label="Direct WhatsApp"
               >
                 <Phone className="w-4 h-4" />
@@ -128,7 +140,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Direct Contact
             </h4>
             <ul className="space-y-3 text-xs sm:text-sm text-[#5F6B64]">
-              <li className="flex items-start gap-2.5">
+              <li
+                className="flex items-start gap-2.5"
+                style={{
+                  fontFamily: 'Times New Roman',
+                  fontWeight: 'bold',
+                }}
+              >
                 <Phone className="w-4 h-4 text-[#254A34] shrink-0 mt-1" />
                 <div className="flex flex-col gap-0.5">
                   <a href="tel:03112713755" className="hover:text-[#254A34] font-semibold text-[#0F1A14]">

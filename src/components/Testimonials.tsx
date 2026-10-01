@@ -18,13 +18,26 @@ export const Testimonials: React.FC = () => {
   const currentReview = placeholderReviews[currentIndex];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F3F3F3] border-b border-[#E3E4E4]">
+    <section
+      className="py-20 lg:py-28 bg-[#F3F3F3] border-b border-[#E3E4E4]"
+      style={{
+        fontFamily: 'Georgia',
+        fontStyle: 'italic',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          label="Testimonials"
           title="Trusted by Our Clients"
           subtitle="We build genuine, lasting partnerships focused on performance and measurable business growth."
           align="center"
+          titleStyle={{
+            fontStyle: 'italic',
+            fontSize: '37px',
+          }}
+          subtitleStyle={{
+            fontFamily: 'Times New Roman',
+            fontSize: '17px',
+          }}
         />
 
         {/* Layout matching reference: Dark green square card on left, White review card with arrows on right */}
@@ -32,11 +45,17 @@ export const Testimonials: React.FC = () => {
           {/* Left: Dark green square card */}
           <div className="lg:col-span-5 bg-[#254A34] text-white p-8 sm:p-10 rounded-3xl border border-[#1F3B2B] shadow-md flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#C6FF1A] text-[#0F1A14] flex items-center justify-center mb-6">
+              <div
+                className="w-12 h-12 rounded-2xl text-[#0F1A14] flex items-center justify-center mb-6"
+                style={{ backgroundColor: '#b5d677' }}
+              >
                 <MessageSquare className="w-6 h-6 stroke-[2.2]" />
               </div>
 
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C6FF1A]">
+              <span
+                className="text-xs font-bold uppercase tracking-wider"
+                style={{ color: '#f4ffd5' }}
+              >
                 Client Feedback
               </span>
 
@@ -69,7 +88,10 @@ export const Testimonials: React.FC = () => {
           <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-[#E3E4E4] shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-6">
-                <Quote className="w-10 h-10 text-[#C6FF1A] fill-[#C6FF1A]/30" />
+                <Quote
+                  className="w-10 h-10 fill-[#C6FF1A]/30"
+                  style={{ color: '#aac552' }}
+                />
                 <span className="text-xs font-mono text-slate-400">
                   {currentIndex + 1} / {placeholderReviews.length}
                 </span>

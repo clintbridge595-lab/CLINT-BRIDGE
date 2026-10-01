@@ -5,10 +5,15 @@ import { getAssetUrl } from '../utils/asset';
 
 export const Team: React.FC = () => {
   return (
-    <section className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4]">
+    <section
+      className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4]"
+      style={{
+        fontFamily: 'Georgia',
+        fontStyle: 'italic',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          label="Our Agency"
           title="Meet Our Expert Team"
           subtitle="A disciplined 4-person team in Karachi delivering UI/UX design, technical frontend engineering, and local search dominance."
           align="center"

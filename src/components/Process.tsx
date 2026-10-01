@@ -1,12 +1,11 @@
 import React from 'react';
-import { ArrowRight, FileText, Palette, Rocket } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const Process: React.FC = () => {
   const steps = [
     {
       num: '01',
       title: 'Discover & Strategize',
-      icon: FileText,
       description:
         'Client fills our structured brief form. We analyze your customer demographics, existing competitors in Karachi, and core conversion goals.',
       actionText: 'Fill Website Brief',
@@ -15,7 +14,6 @@ export const Process: React.FC = () => {
     {
       num: '02',
       title: 'Design & Build',
-      icon: Palette,
       description:
         'We craft custom UI/UX wireframes, integrate subtle 3D touches, configure WhatsApp lead hooks, and write fast, responsive React code.',
       actionText: 'View Sample Projects',
@@ -24,7 +22,6 @@ export const Process: React.FC = () => {
     {
       num: '03',
       title: 'Launch & Grow',
-      icon: Rocket,
       description:
         'Staging review, final QA testing on mobile devices, Google Business and SEO integration, and launch on our reliable cloud hosting.',
       actionText: 'Choose Package',
@@ -72,7 +69,6 @@ export const Process: React.FC = () => {
         {/* 3 White Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, idx) => {
-            const Icon = step.icon;
             return (
               <div
                 key={idx}
@@ -80,11 +76,6 @@ export const Process: React.FC = () => {
               >
                 {/* Upper Body */}
                 <div className="p-8 sm:p-9 relative z-10">
-                  {/* Icon */}
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF7EF] border border-[#E3E4E4] text-[#254A34] flex items-center justify-center mb-6 group-hover:bg-[#254A34] group-hover:text-[#C6FF1A] transition-colors">
-                    <Icon className="w-6 h-6 stroke-[2]" />
-                  </div>
-
                   <h3 className="font-display text-2xl font-bold text-[#0F1A14] mb-3">
                     {step.title}
                   </h3>

@@ -18,8 +18,7 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: 'member-1',
-    // TODO: Replace with agency founder / lead name
-    name: 'Asad Rehman',
+    name: 'Sheri Lee Miller.',
     role: 'Creative Director & Founder',
     image: './images/team-1.jpg',
     bio: 'Oversees visual architecture, brand storytelling, and strategic client growth funnels.',
