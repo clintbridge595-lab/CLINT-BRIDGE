@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
+import { getAssetUrl } from '../utils/asset';
 
 export const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,7 +64,7 @@ export const About: React.FC = () => {
               {/* Photo 1: Top Left Rounded Rectangle */}
               <div className="w-4/5 rounded-3xl overflow-hidden shadow-lg border-4 border-white bg-slate-100">
                 <img
-                  src="./images/about-1.jpg"
+                  src={getAssetUrl('images/about-1.jpg')}
                   alt="Client Bridge team strategizing responsive web interface"
                   width="500"
                   height="380"
@@ -75,7 +76,7 @@ export const About: React.FC = () => {
               {/* Photo 2: Offset Bottom Right Rounded Rectangle */}
               <div className="w-4/5 ml-auto -mt-16 sm:-mt-20 rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 relative z-10">
                 <img
-                  src="./images/about-2.jpg"
+                  src={getAssetUrl('images/about-2.jpg')}
                   alt="Client Bridge developers executing high performance web code"
                   width="500"
                   height="380"

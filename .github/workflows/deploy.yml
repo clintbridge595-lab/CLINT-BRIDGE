@@ -35,6 +35,8 @@ jobs:
         run: npm ci || npm install
 
       - name: Build Vite application
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: npm run build
 
       - name: Setup Pages

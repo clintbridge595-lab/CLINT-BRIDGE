@@ -1,6 +1,7 @@
 import React from 'react';
 import { SectionHeader } from './SectionHeader';
 import { teamMembers } from '../data/team';
+import { getAssetUrl } from '../utils/asset';
 
 export const Team: React.FC = () => {
   return (
@@ -31,7 +32,7 @@ export const Team: React.FC = () => {
                   {/* Photo area */}
                   <div className="relative rounded-2xl overflow-hidden mb-6 h-64 sm:h-72 bg-slate-100">
                     <img
-                      src={member.image}
+                      src={getAssetUrl(member.image)}
                       alt={member.name}
                       width="350"
                       height="400"

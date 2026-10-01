@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, MessageSquare, Quote } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { placeholderReviews } from '../data/testimonials';
+import { getAssetUrl } from '../utils/asset';
 
 export const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +85,7 @@ export const Testimonials: React.FC = () => {
               <div className="flex items-center gap-3.5">
                 <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-200 border-2 border-white shadow-xs shrink-0">
                   <img
-                    src={currentReview.avatar}
+                    src={getAssetUrl(currentReview.avatar)}
                     alt={currentReview.clientName}
                     width="48"
                     height="48"

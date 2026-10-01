@@ -66,7 +66,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
         </a>
 
         {/* Center: Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+        <nav
+          className="hidden md:flex items-center gap-8"
+          aria-label="Main Navigation"
+          style={{
+            fontFamily: 'Times New Roman',
+            fontWeight: 'bold',
+            fontStyle: 'normal',
+            color: '#121a10',
+          }}
+        >
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -74,11 +83,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleLinkClick(link.id, e)}
-                className={`relative py-1 text-sm font-semibold transition-colors duration-200 ${
-                  isActive
-                    ? 'text-[#254A34]'
-                    : 'text-[#5F6B64] hover:text-[#0F1A14]'
-                }`}
+                style={{
+                  fontFamily: 'Times New Roman',
+                  fontWeight: 'bold',
+                  fontStyle: 'normal',
+                  color: isActive ? '#254A34' : '#121a10',
+                }}
+                className={`relative py-1 text-sm transition-colors duration-200 hover:text-[#254A34]`}
               >
                 {link.label}
                 {isActive && (

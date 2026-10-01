@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { projects } from '../data/projects';
+import { getAssetUrl } from '../utils/asset';
 
 export const WorkShowcase: React.FC = () => {
   const topProjects = projects.slice(0, 4);
@@ -15,27 +16,13 @@ export const WorkShowcase: React.FC = () => {
   };
 
   return (
-    <section
-      id="work"
-      className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4]"
-      style={{
-        fontFamily: 'Georgia',
-        fontStyle: 'italic',
-      }}
-    >
+    <section id="work" className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
+          label="Our Work"
           title="Work That Drives Results"
           subtitle="Explore live production websites engineered and deployed by Client Bridge for local and growing enterprises."
           align="center"
-          titleStyle={{
-            fontFamily: 'Georgia',
-            fontSize: '37px',
-          }}
-          subtitleStyle={{
-            fontFamily: 'Times New Roman',
-            fontSize: '15px',
-          }}
         />
 
         {/* 2x2 Grid of White Rounded Cards */}
@@ -51,7 +38,7 @@ export const WorkShowcase: React.FC = () => {
               {/* Image Area with Zoom effect */}
               <div className="rounded-2xl overflow-hidden mb-6 h-64 sm:h-72 bg-slate-100 relative">
                 <img
-                  src={project.image}
+                  src={getAssetUrl(project.image)}
                   alt={`${project.title} live preview`}
                   width="600"
                   height="400"
@@ -100,7 +87,7 @@ export const WorkShowcase: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 rounded-2xl overflow-hidden h-64 sm:h-80 bg-slate-100 relative">
                 <img
-                  src={wideProject.image}
+                  src={getAssetUrl(wideProject.image)}
                   alt={`${wideProject.title} live portal`}
                   width="800"
                   height="450"

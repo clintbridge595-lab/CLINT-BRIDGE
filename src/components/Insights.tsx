@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowUpRight, X, BookOpen } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { insights, InsightItem } from '../data/insights';
+import { getAssetUrl } from '../utils/asset';
 
 export const Insights: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<InsightItem | null>(null);
@@ -86,7 +87,7 @@ export const Insights: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden mb-6 h-56 bg-slate-100">
               <img
-                src={selectedArticle.image}
+                src={getAssetUrl(selectedArticle.image)}
                 alt={selectedArticle.title}
                 width="600"
                 height="300"

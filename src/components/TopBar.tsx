@@ -3,8 +3,15 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 export const TopBar: React.FC = () => {
   return (
-    <div className="w-full bg-[#1F3B2B] text-slate-200 text-xs py-2 px-4 sm:px-8 border-b border-[#254A34]/60">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <div
+      className="w-full bg-[#1F3B2B] text-slate-200 text-xs px-4 sm:px-8 border-b border-[#254A34]/60 flex items-center"
+      style={{
+        height: '32.6667px',
+        fontFamily: 'Georgia',
+        fontStyle: 'italic',
+      }}
+    >
+      <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
         {/* Left: Contact Info */}
         <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
           <a
@@ -23,10 +30,10 @@ export const TopBar: React.FC = () => {
             <span className="font-medium">clintbridge595@gmail.com</span>
           </a>
 
-          {/* Hide address on mobile as instructed */}
+          {/* Hide address on mobile */}
           <div className="hidden lg:flex items-center gap-1.5 text-slate-300">
             <MapPin className="w-3.5 h-3.5 text-[#C6FF1A]" />
-            <span>Office 402, Jafra Tower, Karachi</span>
+            <span>Malir 15 Flyover, Pakistan</span>
           </div>
         </div>
 

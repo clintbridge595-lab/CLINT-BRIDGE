@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { featuredServices, secondaryServices, ServiceItem } from '../data/services';
+import { getAssetUrl } from '../utils/asset';
 
 export const Services: React.FC = () => {
   const [activeCardId, setActiveCardId] = useState<string>('social-media'); // Default lime center card
@@ -76,7 +77,7 @@ export const Services: React.FC = () => {
                 {!isHighlight && (
                   <div className="rounded-2xl overflow-hidden mb-6 h-52 bg-slate-900/40">
                     <img
-                      src={service.image}
+                      src={getAssetUrl(service.image)}
                       alt={service.title}
                       width="400"
                       height="240"
@@ -128,7 +129,7 @@ export const Services: React.FC = () => {
                 {isHighlight && (
                   <div className="rounded-2xl overflow-hidden mb-6 h-48 bg-slate-900/40 shadow-inner">
                     <img
-                      src={service.image}
+                      src={getAssetUrl(service.image)}
                       alt={service.title}
                       width="400"
                       height="240"

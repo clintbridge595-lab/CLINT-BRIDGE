@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/asset';
 
 export const Hero: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -138,7 +139,7 @@ export const Hero: React.FC = () => {
                   }}
                 >
                   <img
-                    src="./images/hero-1.jpg"
+                    src={getAssetUrl('images/hero-1.jpg')}
                     alt="Creative agency team planning digital marketing strategy"
                     width="400"
                     height="500"
@@ -154,7 +155,7 @@ export const Hero: React.FC = () => {
                   }}
                 >
                   <img
-                    src="./images/hero-2.jpg"
+                    src={getAssetUrl('images/hero-2.jpg')}
                     alt="Digital designers collaborating on website architecture"
                     width="400"
                     height="350"
@@ -170,7 +171,7 @@ export const Hero: React.FC = () => {
                   }}
                 >
                   <img
-                    src="./images/hero-3.jpg"
+                    src={getAssetUrl('images/hero-3.jpg')}
                     alt="Professional workstation reviewing client conversion analytics"
                     width="400"
                     height="350"
@@ -186,7 +187,7 @@ export const Hero: React.FC = () => {
                   }}
                 >
                   <img
-                    src="./images/hero-4.jpg"
+                    src={getAssetUrl('images/hero-4.jpg')}
                     alt="Agency strategist presenting digital brand growth"
                     width="400"
                     height="500"
