@@ -21,7 +21,7 @@ export const teamMembers: TeamMember[] = [
     // TODO: Replace with agency founder / lead name
     name: 'Asad Rehman',
     role: 'Creative Director & Founder',
-    image: '/images/team-1.jpg',
+    image: './images/team-1.jpg',
     bio: 'Oversees visual architecture, brand storytelling, and strategic client growth funnels.',
     isLead: true, // Highlighted dark green card with lime social column
     socials: {
@@ -36,7 +36,7 @@ export const teamMembers: TeamMember[] = [
     // TODO: Replace with lead web engineer name
     name: 'Hamza Tariq',
     role: 'Lead Web Engineer',
-    image: '/images/team-2.jpg',
+    image: './images/team-2.jpg',
     bio: 'Specialist in modern React, high-speed Vite architectures, and interactive 3D web experiences.',
     isLead: false,
     socials: {
@@ -49,7 +49,7 @@ export const teamMembers: TeamMember[] = [
     // TODO: Replace with UI/UX designer name
     name: 'Zainab Fatima',
     role: 'Senior UI/UX Designer',
-    image: '/images/team-3.jpg',
+    image: './images/team-3.jpg',
     bio: 'Designs intuitive mobile-first interfaces and brand systems optimized for business conversions.',
     isLead: false,
     socials: {
@@ -62,7 +62,7 @@ export const teamMembers: TeamMember[] = [
     // TODO: Replace with growth strategist name
     name: 'Bilal Khan',
     role: 'Performance & SEO Strategist',
-    image: '/images/team-4.jpg',
+    image: './images/team-4.jpg',
     bio: 'Drives Google Maps visibility, high-intent local search rankings, and Meta advertising campaigns.',
     isLead: false,
     socials: {

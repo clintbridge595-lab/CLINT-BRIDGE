@@ -65,7 +65,7 @@ export const WhyChoose: React.FC = () => {
               {/* Photo 1: Upper card */}
               <div className="rounded-3xl overflow-hidden shadow-lg border-4 border-white bg-slate-100 w-4/5">
                 <img
-                  src="/images/why-1.jpg"
+                  src="./images/why-1.jpg"
                   alt="Client Bridge engineering workstation"
                   width="400"
                   height="300"
@@ -93,7 +93,7 @@ export const WhyChoose: React.FC = () => {
               {/* Photo 2: Offset bottom card */}
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 w-4/5 ml-auto -mt-12 relative z-0">
                 <img
-                  src="/images/why-2.jpg"
+                  src="./images/why-2.jpg"
                   alt="Client Bridge team alignment meeting"
                   width="400"
                   height="300"
