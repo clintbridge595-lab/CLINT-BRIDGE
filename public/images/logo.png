@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 380 380" width="100%" height="100%">
+  <defs>
+    <!-- Metallic Silver Bezel Outer Gradient -->
+    <linearGradient id="chromeBezel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="20%" stop-color="#E2E7EC"/>
+      <stop offset="45%" stop-color="#9AA6B2"/>
+      <stop offset="55%" stop-color="#FFFFFF"/>
+      <stop offset="75%" stop-color="#7B8794"/>
+      <stop offset="100%" stop-color="#2D3748"/>
+    </linearGradient>
+
+    <!-- Inner Silver Trim -->
+    <linearGradient id="innerChrome" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#CBD5E1"/>
+      <stop offset="70%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <!-- Deep Royal Blue Center Disc -->
+    <radialGradient id="royalBlueMedallion" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#1D72E8"/>
+      <stop offset="40%" stop-color="#0F52BA"/>
+      <stop offset="75%" stop-color="#0A3678"/>
+      <stop offset="100%" stop-color="#041B42"/>
+    </radialGradient>
+
+    <!-- 3D Banner Gradient -->
+    <linearGradient id="navyBanner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E214A"/>
+      <stop offset="50%" stop-color="#091738"/>
+      <stop offset="100%" stop-color="#030B1C"/>
+    </linearGradient>
+
+    <!-- Orange Notch Gradient on T -->
+    <linearGradient id="orangeNotch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <!-- Bridge Steel Gradient -->
+    <linearGradient id="bridgeSteel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#E2E8F0"/>
+      <stop offset="80%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Metallic Circular Rim -->
+  <circle cx="200" cy="200" r="182" fill="url(#chromeBezel)" filter="url(#softGlow)"/>
+  <circle cx="200" cy="200" r="168" fill="#0A1832"/>
+  <circle cx="200" cy="200" r="162" fill="url(#innerChrome)"/>
+
+  <!-- Royal Blue Deep Center Disc -->
+  <circle cx="200" cy="200" r="150" fill="url(#royalBlueMedallion)"/>
+
+  <!-- Concentric Blueprint Guide Rings -->
+  <circle cx="200" cy="200" r="136" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.5"/>
+  <circle cx="200" cy="200" r="122" fill="none" stroke="#94A3B8" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Suspension Bridge Architecture -->
+  <g id="bridgeStructure" stroke="url(#bridgeSteel)" fill="none">
+    <!-- Main Center Suspension Towers -->
+    <path d="M174,68 L174,236 M226,68 L226,236" stroke-width="5" stroke-linecap="round"/>
+    
+    <!-- Tower Bracing Crosses -->
+    <path d="M174,90 L226,118 M226,90 L174,118" stroke-width="3"/>
+    <path d="M174,128 L226,156 M226,128 L174,156" stroke-width="3"/>
+    <path d="M174,166 L226,194 M226,166 L174,194" stroke-width="3"/>
+    
+    <!-- Tower Top Crowns -->
+    <rect x="170" y="62" width="9" height="10" fill="#FFFFFF" stroke="none"/>
+    <rect x="221" y="62" width="9" height="10" fill="#FFFFFF" stroke="none"/>
+    <path d="M166,74 L234,74" stroke-width="4"/>
+
+    <!-- Left & Right Sweeping Suspension Cables -->
+    <path d="M62,230 Q130,165 174,74" stroke-width="4.5" stroke="#FFFFFF"/>
+    <path d="M338,230 Q270,165 226,74" stroke-width="4.5" stroke="#FFFFFF"/>
+
+    <!-- Vertical Hanger Cables -->
+    <line x1="92" y1="210" x2="92" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+    <line x1="112" y1="190" x2="112" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+    <line x1="132" y1="165" x2="132" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+    <line x1="152" y1="135" x2="152" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+
+    <line x1="248" y1="135" x2="248" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+    <line x1="268" y1="165" x2="268" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+    <line x1="288" y1="190" x2="288" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+    <line x1="308" y1="210" x2="308" y2="240" stroke-width="2" stroke="#CBD5E1"/>
+
+    <!-- Lower Deck Grid -->
+    <path d="M80,268 L320,268 L285,316 L115,316 Z" fill="#061633" stroke="#64748B" stroke-width="2.5"/>
+    <line x1="200" y1="268" x2="200" y2="316" stroke="#F8FAFC" stroke-dasharray="6,4" stroke-width="3"/>
+    <line x1="145" y1="268" x2="135" y2="316" stroke="#94A3B8" stroke-width="2"/>
+    <line x1="255" y1="268" x2="265" y2="316" stroke="#94A3B8" stroke-width="2"/>
+
+    <!-- Diagonal Under-Truss Cables -->
+    <path d="M85,265 L174,210 M315,265 L226,210" stroke-width="2.5" stroke="#E2E8F0"/>
+    <path d="M120,290 L174,215 M280,290 L226,215" stroke-width="2" stroke="#94A3B8"/>
+  </g>
+
+  <!-- 3D Dimensional Navy Plaque Banner -->
+  <g transform="translate(0, 6)">
+    <!-- Deep Drop Shadow under Banner -->
+    <polygon points="40,166 360,138 368,230 48,258" fill="#020817" opacity="0.6"/>
+
+    <!-- Metallic Beveled Banner Border -->
+    <polygon points="42,164 358,136 364,226 48,254" fill="url(#chromeBezel)"/>
+
+    <!-- Main Navy Banner Face -->
+    <polygon points="46,161 354,133 360,221 52,249" fill="url(#navyBanner)"/>
+
+    <!-- Left & Right Chrome End Finials -->
+    <polygon points="46,161 36,196 52,249" fill="url(#chromeBezel)"/>
+    <polygon points="354,133 366,176 360,221" fill="url(#chromeBezel)"/>
+
+    <!-- Orange Notch on 'T' of CLINT -->
+    <polygon points="266,141 282,139 278,152 262,154" fill="url(#orangeNotch)"/>
+
+    <!-- Typography: CLINT -->
+    <text x="200" y="194"
+          text-anchor="middle"
+          font-family="'Space Grotesk', 'Inter', 'Arial Black', sans-serif"
+          font-weight="900"
+          font-size="48"
+          letter-spacing="2.5"
+          fill="#FFFFFF"
+          stroke="#071738"
+          stroke-width="1.8"
+          transform="rotate(-4 200 194)">
+      CLINT
+    </text>
+
+    <!-- Typography: BRIDGE -->
+    <text x="200" y="235"
+          text-anchor="middle"
+          font-family="'Space Grotesk', 'Inter', 'Arial Black', sans-serif"
+          font-weight="800"
+          font-size="34"
+          letter-spacing="5"
+          fill="#FFFFFF"
+          stroke="#071738"
+          stroke-width="1.5"
+          transform="rotate(-4 200 235)">
+      BRIDGE
+    </text>
+  </g>
+</svg>

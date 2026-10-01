@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #254A34;
+  --color-forest-deep: #1F3B2B;
+  --color-forest-card: #31503D;
+  --color-lime-accent: #C6FF1A;
+  --color-lime-soft: #E6F7B8;
+  --color-page-white: #FFFFFF;
+  --color-soft-grey: #F3F3F3;
+  --color-text-dark: #0F1A14;
+  --color-text-muted: #5F6B64;
+  --color-border-subtle: #E3E4E4;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #0F1A14;
+    background-color: #FFFFFF;
+  }
+
+  body {
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.photo-grayscale {
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.photo-grayscale:hover {
+  filter: grayscale(0.85) contrast(1.08);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+/* Subtle dotted grid texture for hero background */
+.bg-dotted-pattern {
+  background-image: radial-gradient(#d3d8d5 1px, transparent 1px);
+  background-size: 24px 24px;
+}
