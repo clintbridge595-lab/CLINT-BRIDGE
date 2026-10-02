@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="flex items-center gap-3">
               {/* Facebook */}
               <a
-                href="https://www.facebook.com/share/1V5Cuj6SrG/"
+                href="https://www.facebook.com/profile.php?id=61595149822424"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full text-[#0F1A14] flex items-center justify-center shadow-xs hover:scale-105 transition-transform"
@@ -88,7 +88,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/clintbridgeagency"
+                href="https://www.instagram.com/clint_bridge_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full text-[#0F1A14] flex items-center justify-center shadow-xs hover:scale-105 transition-transform"

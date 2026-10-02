@@ -24,8 +24,8 @@ export const teamMembers: TeamMember[] = [
     bio: 'Oversees visual architecture, brand storytelling, and strategic client growth funnels.',
     isLead: true, // Highlighted dark green card with lime social column
     socials: {
-      facebook: 'https://www.facebook.com/share/1V5Cuj6SrG/',
-      instagram: 'https://www.instagram.com/clintbridgeagency',
+      facebook: 'https://www.facebook.com/profile.php?id=61595149822424',
+      instagram: 'https://www.instagram.com/clint_bridge_/',
       twitter: '#',
       linkedin: '#',
     },
@@ -39,8 +39,8 @@ export const teamMembers: TeamMember[] = [
     bio: 'Specialist in modern React, high-speed Vite architectures, and interactive 3D web experiences.',
     isLead: false,
     socials: {
-      facebook: 'https://www.facebook.com/share/1V5Cuj6SrG/',
-      instagram: 'https://www.instagram.com/clintbridgeagency',
+      facebook: 'https://www.facebook.com/profile.php?id=61595149822424',
+      instagram: 'https://www.instagram.com/clint_bridge_/',
     },
   },
   {
@@ -52,8 +52,8 @@ export const teamMembers: TeamMember[] = [
     bio: 'Designs intuitive mobile-first interfaces and brand systems optimized for business conversions.',
     isLead: false,
     socials: {
-      facebook: 'https://www.facebook.com/share/1V5Cuj6SrG/',
-      instagram: 'https://www.instagram.com/clintbridgeagency',
+      facebook: 'https://www.facebook.com/profile.php?id=61595149822424',
+      instagram: 'https://www.instagram.com/clint_bridge_/',
     },
   },
   {
@@ -65,8 +65,8 @@ export const teamMembers: TeamMember[] = [
     bio: 'Drives Google Maps visibility, high-intent local search rankings, and Meta advertising campaigns.',
     isLead: false,
     socials: {
-      facebook: 'https://www.facebook.com/share/1V5Cuj6SrG/',
-      instagram: 'https://www.instagram.com/clintbridgeagency',
+      facebook: 'https://www.facebook.com/profile.php?id=61595149822424',
+      instagram: 'https://www.instagram.com/clint_bridge_/',
     },
   },
 ];

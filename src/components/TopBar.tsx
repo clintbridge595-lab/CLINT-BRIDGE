@@ -42,7 +42,7 @@ export const TopBar: React.FC = () => {
           <div className="bg-[#C6FF1A] text-[#0F1A14] px-3.5 py-1 rounded-sm transform skew-x-[-12deg] flex items-center gap-3 shadow-sm">
             <span className="sr-only">Social links</span>
             <a
-              href="https://www.facebook.com/share/1V5Cuj6SrG/"
+              href="https://www.facebook.com/profile.php?id=61595149822424"
               target="_blank"
               rel="noopener noreferrer"
               className="transform skew-x-[12deg] hover:opacity-75 transition-opacity"
@@ -54,7 +54,7 @@ export const TopBar: React.FC = () => {
             </a>
             <span className="text-[#0F1A14]/30 transform skew-x-[12deg]">|</span>
             <a
-              href="https://www.instagram.com/clintbridgeagency"
+              href="https://www.instagram.com/clint_bridge_/"
               target="_blank"
               rel="noopener noreferrer"
               className="transform skew-x-[12deg] hover:opacity-75 transition-opacity"

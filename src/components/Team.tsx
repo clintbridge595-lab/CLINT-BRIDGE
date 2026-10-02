@@ -50,7 +50,7 @@ export const Team: React.FC = () => {
                       <div className="absolute top-3 right-3 bg-[#C6FF1A] rounded-full py-2 px-1.5 flex flex-col items-center gap-2.5 shadow-md">
                         {/* Facebook */}
                         <a
-                          href="https://www.facebook.com/share/1V5Cuj6SrG/"
+                          href="https://www.facebook.com/profile.php?id=61595149822424"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Facebook"
@@ -82,7 +82,7 @@ export const Team: React.FC = () => {
                         </a>
                         {/* Instagram */}
                         <a
-                          href="https://www.instagram.com/clintbridgeagency"
+                          href="https://www.instagram.com/clint_bridge_/"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Instagram"
