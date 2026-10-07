@@ -7,9 +7,9 @@ export const Process: React.FC = () => {
       num: '01',
       title: 'Discover & Strategize',
       description:
-        'Client fills our structured brief form. We analyze your customer demographics, existing competitors in Karachi, and core conversion goals.',
-      actionText: 'Fill Website Brief',
-      actionUrl: 'https://forms.gle/eUynYqzZziPvoqZz6',
+        'We analyze your customer demographics, existing competitors in Karachi, and core conversion goals to create a winning growth roadmap.',
+      actionText: 'Get Free Quote',
+      actionUrl: '#quote',
     },
     {
       num: '02',

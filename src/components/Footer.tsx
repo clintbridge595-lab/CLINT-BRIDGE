@@ -170,7 +170,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#254A34] shrink-0 mt-0.5" />
-                <span>Malir 15 Flyover, Pakistan</span>
+                <span>Pakistan, Karachi</span>
               </li>
             </ul>
           </div>

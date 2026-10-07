@@ -9,7 +9,6 @@ import { WhyChoose } from './components/WhyChoose';
 import { Process } from './components/Process';
 import { WorkShowcase } from './components/WorkShowcase';
 import { Pricing } from './components/Pricing';
-import { StartProject } from './components/StartProject';
 import { QuoteForm } from './components/QuoteForm';
 import { Testimonials } from './components/Testimonials';
 import { Team } from './components/Team';
@@ -89,9 +88,6 @@ export default function App() {
 
         {/* [L] Pricing (3 clear packages: 20k / 30k / 50k) */}
         <Pricing />
-
-        {/* [M] Design & Briefs (Start your project the right way) */}
-        <StartProject />
 
         {/* [N] Get Your Free Quote Form */}
         <QuoteForm />
