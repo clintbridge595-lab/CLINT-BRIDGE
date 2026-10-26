@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 
 export const TopBar: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ export const TopBar: React.FC = () => {
       }}
     >
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
-        {/* Left: Contact Info */}
+        {/* Left: Contact Info (Phone and Email only) */}
         <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
           <a
             href="tel:03112713755"
@@ -29,12 +29,6 @@ export const TopBar: React.FC = () => {
             <Mail className="w-3.5 h-3.5 text-[#C6FF1A]" />
             <span className="font-medium">clintbridge595@gmail.com</span>
           </a>
-
-          {/* Hide address on mobile */}
-          <div className="hidden lg:flex items-center gap-1.5 text-slate-300">
-            <MapPin className="w-3.5 h-3.5 text-[#C6FF1A]" />
-            <span>Malir 15 Flyover, Pakistan</span>
-          </div>
         </div>
 
         {/* Right: Angled Lime block with Facebook and Instagram */}
