@@ -7,50 +7,37 @@ export const WhyChoose: React.FC = () => {
   const features = [
     {
       icon: Smartphone,
-      title: 'Mobile-First Design',
-      desc: 'Over 85% of traffic in Pakistan originates on mobile phones. Every layout, button, and font size is optimized for handheld screens.',
+      title: 'Mobile-First Architecture',
+      desc: 'Over 85% of traffic in Pakistan originates on mobile phones. Every layout, CTA button, and font scale is optimized for handheld conversion.',
     },
     {
       icon: PackageCheck,
-      title: 'Clear Packages',
-      desc: 'Transparent pricing upfront with clearly documented deliverables. No hidden hourly creep, surprise invoices, or scope ambiguity.',
+      title: 'Transparent Fixed Scope',
+      desc: 'Transparent packages upfront with documented deliverables and timelines. No surprise hourly creep or ambiguous scopes.',
     },
     {
       icon: MessageCircle,
-      title: 'WhatsApp-First Support',
-      desc: 'Direct communication with our 4-person team on WhatsApp. Immediate responses, voice notes, and quick revisions when you need them.',
+      title: 'Direct WhatsApp Access',
+      desc: 'Direct communication with our 4-person Karachi team on WhatsApp. Immediate updates, voice notes, and quick revisions whenever you need them.',
     },
     {
       icon: BarChart3,
-      title: 'Transparent Reporting',
-      desc: 'Real Google Analytics, search console metrics, and ad spend verification. Honest growth reporting without fabricated statistics.',
+      title: 'Measurable Growth Metrics',
+      desc: 'Real Google Analytics, search console visibility, and conversion tracking. Honest performance reporting without fabricated statistics.',
     },
   ];
 
   return (
-    <section
-      className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4] overflow-hidden"
-      style={{
-        fontFamily: 'Georgia',
-        fontStyle: 'italic',
-      }}
-    >
+    <section className="py-20 lg:py-28 bg-white border-b border-[#E3E4E4] overflow-hidden font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          title="Why Our Clients Believe We're Different"
-          subtitle="We eliminate the friction of dealing with disengaged contractors by acting as your dedicated local growth engineers."
+          title="Engineered for Performance & Trust"
+          subtitle="We eliminate the friction of dealing with disengaged freelancers by acting as your dedicated local digital team in Karachi."
           align="center"
-          titleStyle={{
-            fontFamily: 'Georgia',
-            fontSize: '38px',
-          }}
-          subtitleStyle={{
-            fontSize: '16px',
-          }}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Photo collage + Lime half-circle with squiggle + sparkle star */}
+          {/* Left Column: Authentic Photography Collage */}
           <div className="lg:col-span-5 relative">
             <div className="relative max-w-sm sm:max-w-md mx-auto">
               {/* Lime Sparkle Star top right */}
@@ -67,7 +54,7 @@ export const WhyChoose: React.FC = () => {
               <div className="rounded-3xl overflow-hidden shadow-lg border-4 border-white bg-slate-100 w-4/5">
                 <img
                   src={getAssetUrl('images/why-1.jpg')}
-                  alt="Client Bridge engineering workstation"
+                  alt="CLINT BRIDGE engineering and design workstation"
                   width="400"
                   height="300"
                   className="w-full h-56 sm:h-64 object-cover photo-grayscale"
@@ -75,9 +62,9 @@ export const WhyChoose: React.FC = () => {
                 />
               </div>
 
-              {/* Graphic element: Lime half-circle with black squiggle line */}
+              {/* Graphic element: Lime badge with black squiggle line */}
               <div
-                className="absolute top-1/3 -right-6 z-10 w-28 h-28 rounded-full bg-[#C6FF1A] border-4 border-white shadow-md flex items-center justify-center p-4 overflow-hidden"
+                className="absolute top-1/3 -right-6 z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#C6FF1A] border-4 border-white shadow-md flex items-center justify-center p-4 overflow-hidden"
                 aria-hidden="true"
               >
                 <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
@@ -95,7 +82,7 @@ export const WhyChoose: React.FC = () => {
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 w-4/5 ml-auto -mt-12 relative z-0">
                 <img
                   src={getAssetUrl('images/why-2.jpg')}
-                  alt="Client Bridge team alignment meeting"
+                  alt="CLINT BRIDGE team collaborative review"
                   width="400"
                   height="300"
                   className="w-full h-56 sm:h-64 object-cover photo-grayscale"
@@ -110,44 +97,22 @@ export const WhyChoose: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {features.map((item, index) => {
                 const IconComponent = item.icon;
-                const containerStyle: React.CSSProperties =
-                  index === 0
-                    ? { fontFamily: 'Georgia', fontStyle: 'italic' }
-                    : {};
-
-                const titleStyle: React.CSSProperties =
-                  index === 0 || index === 1
-                    ? { fontSize: '22px' }
-                    : { fontFamily: 'Georgia', fontSize: '21px' };
-
-                const descStyle: React.CSSProperties =
-                  index === 0 || index === 1
-                    ? { fontSize: '12px' }
-                    : { fontSize: '13px' };
-
                 return (
                   <div
                     key={index}
                     className="bg-[#254A34] text-white p-6 sm:p-7 rounded-3xl border border-[#31503D] shadow-sm hover:border-[#C6FF1A]/60 transition-all duration-200 flex flex-col justify-between"
-                    style={containerStyle}
                   >
                     <div>
                       {/* Lime circular icon container */}
-                      <div className="w-12 h-12 rounded-full bg-[#C6FF1A] text-[#0F1A14] flex items-center justify-center mb-5 shadow-sm">
+                      <div className="w-12 h-12 rounded-full bg-[#C6FF1A] text-[#0F1A14] flex items-center justify-center mb-5 shadow-xs">
                         <IconComponent className="w-6 h-6 stroke-[2.2]" />
                       </div>
 
-                      <h3
-                        className="font-display font-bold text-white mb-2.5"
-                        style={titleStyle}
-                      >
+                      <h3 className="font-serif italic text-xl font-bold text-white mb-2.5">
                         {item.title}
                       </h3>
 
-                      <p
-                        className="text-slate-200 leading-relaxed"
-                        style={descStyle}
-                      >
+                      <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-sans">
                         {item.desc}
                       </p>
                     </div>

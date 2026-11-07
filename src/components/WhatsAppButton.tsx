@@ -6,7 +6,7 @@ export const WhatsAppButton: React.FC = () => {
 
   const handleClick = () => {
     window.open(
-      'https://wa.me/923112713755?text=Hi%20Client%20Bridge,%20I%20am%20interested%20in%20discussing%20a%20project.',
+      'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20am%20interested%20in%20discussing%20a%20project.',
       '_blank'
     );
   };
@@ -25,8 +25,8 @@ export const WhatsAppButton: React.FC = () => {
         onClick={handleClick}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="relative w-14 h-14 rounded-full bg-[#1FA866] hover:bg-[#188c54] text-white shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#C6FF1A]/50 group"
-        aria-label="Direct WhatsApp Chat with Client Bridge"
+        className="relative w-14 h-14 rounded-full bg-[#1FA866] hover:bg-[#188c54] text-white shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#C6FF1A]/50 cursor-pointer group"
+        aria-label="Direct WhatsApp Chat with CLINT BRIDGE"
       >
         {/* Soft pulse glow ring */}
         <span className="absolute -inset-1 rounded-full bg-[#1FA866] opacity-35 animate-ping pointer-events-none" />

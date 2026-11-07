@@ -17,7 +17,7 @@ export const placeholderReviews: TestimonialItem[] = [
     businessName: 'Karachi Retail Enterprise',
     location: 'Karachi, Pakistan',
     projectType: 'Website & Google Business',
-    quote: 'Client Bridge designed our modern web presence with a direct WhatsApp ordering system that made connecting with local customers straightforward and fast.',
+    quote: 'CLINT BRIDGE designed our modern web presence with a direct WhatsApp ordering system that made connecting with local customers straightforward and fast.',
     avatar: './images/hero-1.jpg',
   },
   {

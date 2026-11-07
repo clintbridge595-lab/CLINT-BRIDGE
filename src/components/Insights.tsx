@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, X, BookOpen } from 'lucide-react';
+import { ArrowUpRight, X } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { insights, InsightItem } from '../data/insights';
 import { getAssetUrl } from '../utils/asset';
@@ -8,29 +8,13 @@ export const Insights: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<InsightItem | null>(null);
 
   return (
-    <section
-      className="bg-[#254A34] text-white py-20 lg:py-28 border-b border-[#1F3B2B]"
-      style={{
-        fontFamily: 'Georgia',
-        fontStyle: 'italic',
-      }}
-    >
+    <section id="insights" className="bg-[#254A34] text-white py-20 lg:py-28 border-b border-[#1F3B2B] font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <SectionHeader
-          title="Our Latest News & Insights"
-          subtitle="Tactical blueprints on conversion design, local map rankings, and direct sales channels in Pakistan."
+          title="Industry Insights & Practical Blueprints"
+          subtitle="Tactical frameworks on conversion design, local Google Maps rankings, and direct sales channels in Pakistan."
           align="center"
           isDark={true}
-          titleStyle={{
-            fontFamily: 'Georgia',
-            fontWeight: 'normal',
-            fontSize: '37px',
-          }}
-          subtitleStyle={{
-            fontFamily: 'Times New Roman',
-            fontSize: '16px',
-            color: '#ffffff',
-          }}
         />
 
         {/* 3 Insights Cards */}
@@ -45,7 +29,7 @@ export const Insights: React.FC = () => {
                 {/* Grayscale Image */}
                 <div className="rounded-2xl overflow-hidden mb-5 h-48 bg-slate-900/40">
                   <img
-                    src={item.image}
+                    src={getAssetUrl(item.image)}
                     alt={item.title}
                     width="400"
                     height="240"
@@ -59,7 +43,7 @@ export const Insights: React.FC = () => {
                   {item.category}
                 </span>
 
-                <h3 className="font-display text-xl font-bold text-white mt-2 mb-3 leading-snug group-hover:text-[#C6FF1A] transition-colors">
+                <h3 className="font-serif italic text-xl font-bold text-white mt-2 mb-3 leading-snug group-hover:text-[#C6FF1A] transition-colors">
                   {item.title}
                 </h3>
 
@@ -69,9 +53,9 @@ export const Insights: React.FC = () => {
               </div>
 
               {/* Lime "Read More ->" link */}
-              <div className="pt-2 border-t border-[#3F634E] flex items-center justify-between">
+              <div className="pt-3 border-t border-[#3F634E] flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#C6FF1A] group-hover:underline flex items-center gap-1">
-                  Read More <span>→</span>
+                  Read Article <span>→</span>
                 </span>
                 <span className="text-[11px] font-mono text-slate-400">{item.readTime}</span>
               </div>
@@ -82,8 +66,8 @@ export const Insights: React.FC = () => {
 
       {/* Reader Modal */}
       {selectedArticle && (
-        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200">
-          <div className="bg-white text-[#0F1A14] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200">
+          <div className="bg-white text-[#0F1A14] w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl p-6 sm:p-8 shadow-2xl relative font-sans">
             <button
               onClick={() => setSelectedArticle(null)}
               className="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 text-slate-500 hover:text-black transition-colors"
@@ -96,7 +80,7 @@ export const Insights: React.FC = () => {
               {selectedArticle.category}
             </span>
 
-            <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-[#0F1A14] mt-2 mb-4 leading-snug">
+            <h3 className="font-serif italic text-2xl sm:text-3xl font-bold text-[#0F1A14] mt-2 mb-4 leading-snug">
               {selectedArticle.title}
             </h3>
 
@@ -118,11 +102,11 @@ export const Insights: React.FC = () => {
 
             <div className="mt-8 pt-6 border-t border-[#E3E4E4] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <span className="text-xs text-slate-500">
-                Want to implement this strategy for your business?
+                Want to implement this framework for your business?
               </span>
               <a
                 href={`https://wa.me/923112713755?text=${encodeURIComponent(
-                  `Hi Client Bridge, I read your article "${selectedArticle.title}" and would like to discuss this for my business.`
+                  `Hi CLINT BRIDGE, I read your article "${selectedArticle.title}" and would like to discuss this for my business.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

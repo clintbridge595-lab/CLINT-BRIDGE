@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { MarqueeStrip } from './components/MarqueeStrip';
 import { About } from './components/About';
 import { Services } from './components/Services';
+import { DigitalGrowthPartner } from './components/DigitalGrowthPartner';
 import { WhyChoose } from './components/WhyChoose';
 import { Process } from './components/Process';
 import { WorkShowcase } from './components/WorkShowcase';
@@ -20,10 +21,12 @@ import { Chatbot } from './components/Chatbot';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [selectedService, setSelectedService] = useState('Complete Digital Growth Flagship (PKR 200,000)');
+  const [selectedBudget, setSelectedBudget] = useState('PKR 200,000 (Complete Digital Growth)');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'services', 'work', 'pricing', 'about', 'faq', 'quote'];
+      const sections = ['home', 'services', 'growth-partner', 'work', 'pricing', 'about', 'faq', 'quote'];
       const scrollPos = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -47,74 +50,80 @@ export default function App() {
     setActiveSection(sectionId);
   };
 
+  const handleStartTransformation = (
+    serviceName: string = 'Complete Digital Growth Flagship (PKR 200,000)',
+    budget: string = 'PKR 200,000 (Complete Digital Growth)'
+  ) => {
+    setSelectedService(serviceName);
+    setSelectedBudget(budget);
+    const quoteEl = document.getElementById('quote');
+    if (quoteEl) {
+      quoteEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-[#0F1A14] flex flex-col font-sans antialiased selection:bg-[#C6FF1A] selection:text-[#0F1A14]">
-      {/* [A] Top Bar (dark green, slim: phone, email, address, Facebook & Instagram lime angled block) */}
+      {/* Top Bar: verified phone, email, Facebook & Instagram */}
       <TopBar />
 
-      {/* [B] Sticky Navbar */}
+      {/* Sticky Navbar with active section indicator */}
       <Navbar activeSection={activeSection} onNavigate={handleNavigate} />
 
       <main className="flex-grow">
-        {/* [C] Hero section with 3D photo collage & rotating badge */}
-        <Hero />
+        {/* Hero Section */}
+        <Hero onStartTransformation={() => handleStartTransformation()} />
 
-        {/* [D] Marquee Strip */}
+        {/* Capabilities Ticker */}
         <MarqueeStrip />
 
-        {/* [E] About Us with progress bars and truthful statistics */}
+        {/* About CLINT BRIDGE */}
         <About />
 
-        {/* Section separator marquee strip */}
-        <MarqueeStrip />
-
-        {/* [F] Our Services (dark forest green with signature middle lime card) */}
+        {/* Services & Capabilities */}
         <Services />
 
-        {/* [G] Why Choose Us with 2x2 grid */}
+        {/* NEW SECTION: Your Complete Digital Growth Partner */}
+        <DigitalGrowthPartner onStartTransformation={handleStartTransformation} />
+
+        {/* Why Choose Us */}
         <WhyChoose />
 
-        {/* [H] Marquee Strip */}
-        <MarqueeStrip />
-
-        {/* [I] Our Work Process (01, 02, 03 cards) */}
+        {/* Methodology / Process */}
         <Process />
 
-        {/* [J] Marquee Strip */}
-        <MarqueeStrip />
-
-        {/* [K] Our Work (5 real client projects) */}
+        {/* Portfolio Work Showcase (5 verified live client platforms) */}
         <WorkShowcase />
 
-        {/* [L] Pricing (3 clear packages: 20k / 30k / 50k) */}
-        <Pricing />
+        {/* Transparent Pricing Packages (Flagship PKR 200k + Web Packages) */}
+        <Pricing onSelectPlan={handleStartTransformation} />
 
-        {/* [N] Get Your Free Quote Form */}
-        <QuoteForm />
+        {/* Interactive Quote Inquiry Form (with preselected package support) */}
+        <QuoteForm
+          preselectedService={selectedService}
+          preselectedBudget={selectedBudget}
+        />
 
-        {/* [O] Marquee Strip */}
-        <MarqueeStrip />
-
-        {/* [P] Testimonials */}
+        {/* Authentic Client Trust & Verifiable Proof */}
         <Testimonials />
 
-        {/* [Q] Meet Our Expert Team (4 members) */}
+        {/* Meet Our Karachi Team */}
         <Team />
 
-        {/* [R] News & Insights */}
+        {/* News & Strategic Insights */}
         <Insights />
 
-        {/* [S] FAQs */}
+        {/* Frequently Asked Questions */}
         <Faq />
 
-        {/* [T] Newsletter (with marquee strips above and below) */}
+        {/* Newsletter Subscription */}
         <Newsletter />
       </main>
 
-      {/* [U] Footer */}
+      {/* 4-Column Balanced Footer */}
       <Footer onNavigate={handleNavigate} />
 
-      {/* [6] Interactive AI Chatbot (Urdu + English) */}
+      {/* Interactive AI Support Widget */}
       <Chatbot />
     </div>
   );

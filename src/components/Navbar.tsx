@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
     if (quoteSection) {
       quoteSection.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.open('https://wa.me/923112713755?text=Hi%20Client%20Bridge,%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20business.', '_blank');
+      window.open('https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20business.', '_blank');
     }
   };
 
@@ -67,14 +67,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
 
         {/* Center: Desktop Navigation Links */}
         <nav
-          className="hidden md:flex items-center gap-8"
+          className="hidden md:flex items-center gap-8 font-sans"
           aria-label="Main Navigation"
-          style={{
-            fontFamily: 'Times New Roman',
-            fontWeight: 'bold',
-            fontStyle: 'normal',
-            color: '#121a10',
-          }}
         >
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
@@ -83,13 +77,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleLinkClick(link.id, e)}
-                style={{
-                  fontFamily: 'Times New Roman',
-                  fontWeight: 'bold',
-                  fontStyle: 'normal',
-                  color: isActive ? '#254A34' : '#121a10',
-                }}
-                className={`relative py-1 text-sm transition-colors duration-200 hover:text-[#254A34]`}
+                className={`relative py-1 text-sm font-semibold transition-colors duration-200 whitespace-nowrap ${
+                  isActive ? 'text-[#254A34]' : 'text-[#0F1A14]/80 hover:text-[#254A34]'
+                }`}
               >
                 {link.label}
                 {isActive && (

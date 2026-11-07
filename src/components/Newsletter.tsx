@@ -13,40 +13,33 @@ export const Newsletter: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full font-sans">
       {/* Top Marquee Strip */}
       <MarqueeStrip />
 
-      {/* Main Newsletter Section in soft grey */}
-      <section
-        className="bg-[#F3F3F3] py-16 sm:py-20 border-b border-[#E3E4E4]"
-        style={{
-          fontFamily: 'Georgia',
-          fontStyle: 'italic',
-        }}
-      >
+      {/* Main Newsletter Section */}
+      <section className="bg-[#F8F9FA] py-16 sm:py-20 border-b border-[#E3E4E4]">
         <div className="max-w-4xl mx-auto px-4 sm:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-wider text-[#254A34] mb-2 block">
-            Direct Agency Insights
+            Agency Growth Brief
           </span>
 
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F1A14] tracking-tight leading-snug mb-4">
-            Subscribe for Digital Growth Tips & Updates
+          <h2 className="font-serif italic text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F1A14] tracking-tight leading-snug mb-4">
+            Practical Strategies for Growing Businesses
           </h2>
 
-          <p className="text-xs sm:text-sm text-[#5F6B64] max-w-xl mx-auto mb-8">
-            Get practical strategies on local SEO in Pakistan, high-converting WhatsApp lead funnels, and modern web design tips sent once a month. No spam ever.
+          <p className="text-xs sm:text-sm text-[#5F6B64] max-w-xl mx-auto mb-8 font-sans">
+            Get actionable insights on local search ranking in Pakistan, high-converting WhatsApp lead funnels, and modern web architecture delivered directly. No spam ever.
           </p>
 
           {isSubscribed ? (
             <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full border border-[#E3E4E4] text-xs font-bold text-[#254A34] shadow-xs">
               <CheckCircle2 className="w-4 h-4 text-[#1FA866]" />
-              <span>Thank you! You are now subscribed to our growth updates.</span>
+              <span>Thank you! You are now subscribed to CLINT BRIDGE growth updates.</span>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="max-w-md mx-auto flex items-center relative">
               <div className="relative w-full">
-                {/* Lime envelope icon */}
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#254A34]">
                   <span className="w-8 h-8 rounded-full bg-[#C6FF1A] flex items-center justify-center text-[#0F1A14]">
                     <Mail className="w-4 h-4" />
@@ -60,10 +53,9 @@ export const Newsletter: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-14 pr-32 py-3.5 rounded-full bg-white border border-[#E3E4E4] text-sm text-[#0F1A14] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#254A34] shadow-xs"
                 />
-                {/* Dark 'Subscribe' pill */}
                 <button
                   type="submit"
-                  className="absolute right-1.5 top-1.5 bottom-1.5 bg-[#254A34] hover:bg-[#1F3B2B] text-white text-xs font-bold px-5 rounded-full transition-colors active:scale-95"
+                  className="absolute right-1.5 top-1.5 bottom-1.5 bg-[#254A34] hover:bg-[#1F3B2B] text-white text-xs font-bold px-5 rounded-full transition-colors active:scale-95 cursor-pointer"
                 >
                   Subscribe
                 </button>
@@ -72,9 +64,6 @@ export const Newsletter: React.FC = () => {
           )}
         </div>
       </section>
-
-      {/* Bottom Marquee Strip */}
-      <MarqueeStrip style={{ height: '37.3229px' }} />
     </div>
   );
 };

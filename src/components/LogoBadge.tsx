@@ -33,18 +33,20 @@ export const LogoBadge: React.FC<LogoBadgeProps> = ({
       {showText && (
         <div className="flex flex-col justify-center">
           <span
-            className="font-display font-extrabold tracking-tight leading-tight"
+            className="font-extrabold tracking-tight leading-tight text-[#0F1A14]"
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: '17px',
-              color: '#1b2a1c',
+              fontFamily: 'Georgia',
+              fontStyle: 'italic',
+              fontSize: '19px',
             }}
           >
             CLINT <span className="text-[#254A34]">BRIDGE</span>
           </span>
           <span
-            className="uppercase font-semibold tracking-[0.2em] text-[#5F6B64]"
+            className="uppercase font-bold tracking-[0.22em] text-[#5F6B64]"
             style={{
+              fontFamily: 'Playfair Display',
+              fontStyle: 'italic',
               fontSize: '9px',
             }}
           >

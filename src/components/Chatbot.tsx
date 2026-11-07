@@ -11,8 +11,6 @@ import {
   Phone,
   Mail,
   ArrowUpRight,
-  Sparkles,
-  Check,
   RefreshCw,
 } from 'lucide-react';
 
@@ -45,10 +43,10 @@ const SupportAvatar: React.FC<{ size?: string }> = ({ size = 'w-9 h-9' }) => (
       {/* Shirt & Shoulders */}
       <path
         d="M8 32C8 26.5 12.5 22 18 22C23.5 22 28 26.5 28 32V36H8V32Z"
-        fill="#3B82F6"
+        fill="#254A34"
       />
       {/* Collar */}
-      <path d="M15 22L18 26.5L21 22H15Z" fill="#FFFFFF" />
+      <path d="M15 22L18 26.5L21 22H15Z" fill="#C6FF1A" />
     </svg>
   </div>
 );
@@ -66,14 +64,14 @@ export const Chatbot: React.FC = () => {
   const initialQuickReplies = [
     'I have a question',
     'Tell me more about services',
-    'Book a Free Audit',
+    'Get a Free Quote',
   ];
 
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 'welcome-msg',
       sender: 'bot',
-      text: '👋 Hi! How can we help you today with ClientBridge services?',
+      text: '👋 Hi! How can we help you today with CLINT BRIDGE digital agency services?',
       timestamp: 'Just now',
       quickReplies: initialQuickReplies,
     },
@@ -90,7 +88,7 @@ export const Chatbot: React.FC = () => {
     }
   }, [messages, isOpen]);
 
-  // AI Knowledge Engine for ClientBridge
+  // AI Knowledge Engine for CLINT BRIDGE
   const getAIResponse = (
     userText: string
   ): {
@@ -100,28 +98,29 @@ export const Chatbot: React.FC = () => {
   } => {
     const text = userText.toLowerCase().trim();
 
-    // 1. "Book a Free Audit" / Audit requests
+    // 1. "Get a Free Quote" / Audit requests
     if (
       text.includes('audit') ||
-      text.includes('book') ||
-      text.includes('free audit')
+      text.includes('quote') ||
+      text.includes('free quote') ||
+      text.includes('proposal')
     ) {
       return {
         reply:
-          "Awesome! A ClientBridge Free Growth Audit includes a deep-dive review of your current website, Google Maps visibility, and ad funnels. We'll identify high-ROI opportunities within 2 business hours.\n\nReady to get started? Contact us directly or connect on WhatsApp!",
+          "Great! A CLINT BRIDGE Project Consultation includes a complete review of your website requirements, competitor positioning, and lead funnels. We provide a clear roadmap and fixed estimate within 2 business hours.\n\nReady to get started? Fill out our quote form or chat with us directly on WhatsApp!",
         quickReplies: [
-          'WhatsApp (+44 7517 035549)',
+          'WhatsApp (0311-2713755)',
           'Tell me more about services',
           'Pricing Packages',
         ],
         ctaAction: {
-          label: 'Book Free Audit via WhatsApp',
-          url: 'https://wa.me/447517035549?text=Hi%20ClientBridge,%20I%20would%20like%20to%20book%20a%20Free%20Growth%20Audit%20for%20my%20business.',
+          label: 'Chat on WhatsApp',
+          url: 'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20business.',
         },
       };
     }
 
-    // 2. "Tell me more about services" / Services overview
+    // 2. Services overview
     if (
       text.includes('service') ||
       text.includes('services') ||
@@ -130,21 +129,21 @@ export const Chatbot: React.FC = () => {
     ) {
       return {
         reply:
-          'ClientBridge specializes in 3 core business growth pillars:\n\n1. 🎯 Paid Advertising: High-converting Meta Ads & Google Ads campaigns engineered for measurable ROAS.\n2. 🚀 Full-Funnel Growth Systems: Automated lead capture, CRM pipeline integration, and direct WhatsApp sales workflows.\n3. 💻 Custom Web Architecture: Modern 3D interactive web platforms, mobile-first UI/UX, and local SEO dominance.',
+          'CLINT BRIDGE specializes in 8 core digital solutions:\n\n1. 💻 Website Design & Development: Fast, mobile-first React platforms with high conversion rates.\n2. 📱 Social Media & Content Marketing: High-converting creative campaigns.\n3. 🎨 Branding & Logo Design: Complete brand identity systems.\n4. 🔍 Search Engine Optimization: Local and national organic ranking.\n5. 📍 Google Business Profile: Local 3-Pack Maps optimization.\n6. 💬 WhatsApp Funnels: Direct automated lead routing.\n7. 🛒 E-commerce Development: Secure online shopping platforms.\n8. ☁️ Cloud Hosting & Maintenance: High uptime and daily backups.',
         quickReplies: [
-          'Book a Free Audit',
-          'Pricing & Packages',
-          'Paid Ads Details',
-          'Contact Support',
+          'Get a Free Quote',
+          'Pricing Packages',
+          'View Portfolio Work',
+          'Contact Details',
         ],
         ctaAction: {
-          label: 'Chat with a Lead Strategist',
-          url: 'https://wa.me/447517035549?text=Hi%20ClientBridge,%20I%20want%20to%20learn%20more%20about%20your%20services.',
+          label: 'Chat with Lead Strategist',
+          url: 'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20want%20to%20learn%20more%20about%20your%20services.',
         },
       };
     }
 
-    // 3. "I have a question" / General inquiries
+    // 3. General inquiries
     if (
       text.includes('question') ||
       text.includes('sawal') ||
@@ -152,11 +151,11 @@ export const Chatbot: React.FC = () => {
     ) {
       return {
         reply:
-          "We're here to help! What would you like to know?\n\n• Project timelines (standard delivery is 3-7 days)\n• Pricing & transparent packages\n• Paid Ads & Lead generation funnels\n• Speaking directly with a consultant",
+          "We're here to help! What would you like to know?\n\n• Project timelines (standard delivery is 3 to 14 days)\n• Pricing & transparent packages\n• Live portfolio websites\n• Speaking directly with our team in Karachi",
         quickReplies: [
           'Pricing Packages',
           'Project Timeline',
-          'Book a Free Audit',
+          'Get a Free Quote',
           'Call Support',
         ],
       };
@@ -173,15 +172,15 @@ export const Chatbot: React.FC = () => {
     ) {
       return {
         reply:
-          'Our Paid Advertising team crafts precision Meta (Facebook/Instagram) & Google Ads funnels specifically tailored for service businesses and growing brands. We write custom conversion copy, design scroll-stopping creatives, and connect leads straight to WhatsApp or your CRM.',
+          'Our marketing team crafts Meta (Facebook/Instagram) and Google Ads campaigns tailored for service businesses and e-commerce stores in Pakistan and internationally. We write conversion copy, design scroll-stopping creatives, and route leads straight to WhatsApp.',
         quickReplies: [
-          'Book a Free Audit',
-          'See Pricing Packages',
+          'Get a Free Quote',
+          'Pricing Packages',
           'Chat on WhatsApp',
         ],
         ctaAction: {
-          label: 'Discuss Ad Campaigns',
-          url: 'https://wa.me/447517035549?text=Hi%20ClientBridge,%20I%20am%20interested%20in%20Meta%20and%20Google%20Ads.',
+          label: 'Discuss Marketing Campaigns',
+          url: 'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20am%20interested%20in%20marketing%20and%20ads.',
         },
       };
     }
@@ -193,20 +192,23 @@ export const Chatbot: React.FC = () => {
       text.includes('cost') ||
       text.includes('package') ||
       text.includes('kitna') ||
-      text.includes('paisa')
+      text.includes('paisa') ||
+      text.includes('flagship') ||
+      text.includes('digital growth')
     ) {
       return {
         reply:
-          'ClientBridge offers straightforward, transparent investments with zero hidden hourly fees:\n\n• Starter (PKR 20,000 / ~£60): Complete responsive website + free domain, cloud hosting, and WhatsApp flow.\n• Business (PKR 30,000 / ~£90): 5-page custom 3D web platform + Google Maps SEO + Brand Direction (Most Popular).\n• Growth Partner (PKR 50,000 / ~£150): Full 3D web platform + Meta Ads support + monthly CRO & lead optimization.',
+          'CLINT BRIDGE offers clear, transparent packages with zero hidden hourly fees:\n\n⭐ COMPLETE DIGITAL GROWTH (PKR 200,000 — Flagship):\nOur turnkey all-in-one transformation. Includes: 8-Page Custom Website + Android MVP Mobile App + Complete Corporate Branding + Meta Ads Setup + 12 Social Posts & 4 Reels + Google Maps SEO + WhatsApp Business + 30-Day Support.\n\n• STARTER (PKR 30,000): Complete responsive website, custom contact forms, WhatsApp integration, and hosting setup.\n• BUSINESS (PKR 40,000): Up to 5 pages, custom 3D web UI/UX, Google Maps local SEO, and WhatsApp funnel.\n• GROWTH PARTNER (PKR 60,000): Custom web platform, priority maintenance, Google Ads & Meta conversion setup, and monthly CRO.',
         quickReplies: [
-          'Book a Free Audit',
-          'Starter Details',
-          'Business Details',
+          'Flagship (PKR 200k)',
+          'Get a Free Quote',
+          'Starter (PKR 30k)',
+          'Business (PKR 40k)',
           'WhatsApp Us',
         ],
         ctaAction: {
-          label: 'Lock in a Package',
-          url: 'https://wa.me/447517035549?text=Hi%20ClientBridge,%20I%20would%20like%20to%20discuss%20your%20website%20packages.',
+          label: 'Inquire on WhatsApp',
+          url: 'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20would%20like%20to%20discuss%20your%20COMPLETE%20DIGITAL%20GROWTH%20package%20(PKR%20200,000).',
         },
       };
     }
@@ -222,15 +224,15 @@ export const Chatbot: React.FC = () => {
     ) {
       return {
         reply:
-          'You can connect with the ClientBridge team anytime:\n\n📞 Direct UK / International: +44 7517 035549\n📱 Pakistan Line: 0311-2713755 / 0321-2114972\n✉️ Email: clintbridge595@gmail.com\n🌐 Website: clintbridge.com\n\nWe respond to all direct inquiries within 2 hours.',
+          'You can connect with the CLINT BRIDGE team directly:\n\n📱 Primary Line: 0300-2464078\n📞 Direct Line: 0321-2114972\n✉️ Email: clintbridge595@gmail.com\n📍 Location: Karachi, Pakistan\n\nWe respond to all direct inquiries promptly!',
         quickReplies: [
           'Open WhatsApp Now',
-          'Book a Free Audit',
+          'Get a Free Quote',
           'Tell me more about services',
         ],
         ctaAction: {
           label: 'Open WhatsApp Direct',
-          url: 'https://wa.me/447517035549?text=Hi%20ClientBridge,%20connecting%20from%20your%20website%20support%20widget.',
+          url: 'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20connecting%20from%20your%20website.',
         },
       };
     }
@@ -244,11 +246,11 @@ export const Chatbot: React.FC = () => {
     ) {
       return {
         reply:
-          'Speed is one of our biggest advantages! Standard websites are fully designed, developed, and deployed in 3 to 7 business days. Complex custom funnels and 3D web applications take 10 to 14 days.',
+          'Speed and quality go hand in hand at CLINT BRIDGE! Standard websites are delivered in 3 to 7 business days. Custom multi-page platforms and full marketing systems take 10 to 14 days.',
         quickReplies: [
-          'Book a Free Audit',
-          'Tell me more about services',
-          'Contact Support',
+          'Get a Free Quote',
+          'Pricing Packages',
+          'Contact Details',
         ],
       };
     }
@@ -263,16 +265,15 @@ export const Chatbot: React.FC = () => {
     ) {
       return {
         reply:
-          'Walaikum Assalam! ClientBridge mein khushamdeed. Hum high-converting websites, Meta & Google Ads, aur direct WhatsApp lead systems banatay hain. Aap kis service ke baray mein janna chahein ge?',
+          'Walaikum Assalam! CLINT BRIDGE mein khushamdeed. Hum high-converting websites, branding, SEO, aur direct WhatsApp lead systems banatay hain Karachi mein. Aap ko kis service ke baray mein janna hai?',
         quickReplies: [
           'Website Packages',
-          'Paid Ads & Marketing',
-          'Book a Free Audit',
-          'WhatsApp Call',
+          'Get a Free Quote',
+          'WhatsApp Chat',
         ],
         ctaAction: {
           label: 'WhatsApp par baat karein',
-          url: 'https://wa.me/923112713755?text=Hi%20ClientBridge,%20mujhe%20website%20aur%20marketing%20ke%20hawalay%20se%20maloomat%20chahiye.',
+          url: 'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20mujhe%20website%20aur%20marketing%20ke%20hawalay%20se%20maloomat%20chahiye.',
         },
       };
     }
@@ -280,15 +281,15 @@ export const Chatbot: React.FC = () => {
     // Default Fallback
     return {
       reply:
-        "Thank you for contacting ClientBridge! We're dedicated to helping your business acquire high-value clients through modern websites and high-performance ad funnels.\n\nWould you like a complimentary growth audit or would you prefer speaking with our consultants directly?",
+        "Thank you for contacting CLINT BRIDGE! We're dedicated to helping your business turn into an authoritative brand with high-performance web platforms and digital marketing.\n\nWould you like a free quote or would you prefer speaking with our consultants directly?",
       quickReplies: [
-        'Book a Free Audit',
+        'Get a Free Quote',
         'Tell me more about services',
-        'WhatsApp (+44 7517 035549)',
+        'WhatsApp (0311-2713755)',
       ],
       ctaAction: {
         label: 'Chat on WhatsApp',
-        url: 'https://wa.me/447517035549?text=Hi%20ClientBridge,%20I%20have%20an%20inquiry%20regarding%20growth%20services.',
+        url: 'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20have%20an%20inquiry%20regarding%20digital%20agency%20services.',
       },
     };
   };
@@ -309,7 +310,7 @@ export const Chatbot: React.FC = () => {
     setIsTyping(true);
     setShowEmojiPicker(false);
 
-    // AI typing simulation (300 - 600ms)
+    // AI typing simulation (300 - 500ms)
     setTimeout(() => {
       const response = getAIResponse(text);
       const botMsg: ChatMessage = {
@@ -322,19 +323,19 @@ export const Chatbot: React.FC = () => {
       };
       setMessages((prev) => [...prev, botMsg]);
       setIsTyping(false);
-    }, 500);
+    }, 400);
   };
 
   const handleQuickReply = (reply: string) => {
     if (reply.toLowerCase().includes('whatsapp')) {
       window.open(
-        'https://wa.me/447517035549?text=Hi%20ClientBridge,%20I%20am%20chatting%20from%20your%20website%20support%20widget.',
+        'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20am%20chatting%20from%20your%20website%20widget.',
         '_blank'
       );
       return;
     }
     if (reply.toLowerCase().includes('call')) {
-      window.location.href = 'tel:+447517035549';
+      window.location.href = 'tel:03112713755';
       return;
     }
     handleSendMessage(reply);
@@ -348,29 +349,25 @@ export const Chatbot: React.FC = () => {
 
   return (
     <>
-      {/* ========================================================
-          1. FLOATING WIDGET TRIGGER (Bottom Right)
-          Styled exactly like Screenshot 1 & 2
-         ======================================================== */}
+      {/* 1. FLOATING WIDGET TRIGGER (Bottom Right) */}
       <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex items-center justify-end">
         {/* Floating "We Are Here!" Badge over the button */}
         {!isOpen && showBadge && (
           <div className="absolute -top-12 -left-12 sm:-top-14 sm:-left-14 pointer-events-auto z-50 animate-bounce duration-1000">
             <div className="relative">
-              {/* Close 'X' badge on top right */}
+              {/* Close 'X' badge */}
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setShowBadge(false);
                 }}
-                className="absolute -top-1 -right-1 z-30 w-5 h-5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center text-xs shadow-md transition-transform hover:scale-110 active:scale-90"
+                className="absolute -top-1 -right-1 z-30 w-5 h-5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center text-xs shadow-md transition-transform hover:scale-110 active:scale-90 cursor-pointer"
                 aria-label="Close message badge"
                 title="Dismiss"
               >
                 <X className="w-3 h-3 stroke-[2.5]" />
               </button>
 
-              {/* Bubbly Cartoon SVG Text with cyan/blue stroke & white fill matching Screenshot 1 */}
               <div
                 onClick={() => setIsOpen(true)}
                 className="cursor-pointer filter drop-shadow-md select-none hover:scale-105 transition-transform"
@@ -382,12 +379,11 @@ export const Chatbot: React.FC = () => {
                   className="overflow-visible"
                 >
                   <g transform="rotate(-18 65 30)">
-                    {/* Shadow layer */}
                     <text
                       x="65"
                       y="33"
                       textAnchor="middle"
-                      fill="#0284C7"
+                      fill="#254A34"
                       fontSize="21"
                       fontWeight="900"
                       fontFamily="system-ui, -apple-system, sans-serif"
@@ -395,13 +391,12 @@ export const Chatbot: React.FC = () => {
                     >
                       We Are Here!
                     </text>
-                    {/* Thick Cyan Stroke */}
                     <text
                       x="65"
                       y="30"
                       textAnchor="middle"
                       fill="white"
-                      stroke="#00AEEF"
+                      stroke="#254A34"
                       strokeWidth="6"
                       strokeLinejoin="round"
                       strokeLinecap="round"
@@ -412,7 +407,6 @@ export const Chatbot: React.FC = () => {
                     >
                       We Are Here!
                     </text>
-                    {/* White Fill Layer */}
                     <text
                       x="65"
                       y="30"
@@ -432,28 +426,24 @@ export const Chatbot: React.FC = () => {
           </div>
         )}
 
-        {/* Circular Emerald Green Button (#00A859) */}
+        {/* Circular Forest Green Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative w-15 h-15 sm:w-16 sm:h-16 rounded-full bg-[#00A859] hover:bg-[#00964F] text-white shadow-2xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#00A859]/40 group"
+          className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#254A34] hover:bg-[#1F3B2B] text-white shadow-2xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#254A34]/40 cursor-pointer group"
           aria-label={isOpen ? 'Close Customer Support' : 'Open Customer Support'}
         >
           {isOpen ? (
-            /* Down chevron arrow when window is open (as seen in Screenshot 2 bottom right) */
             <ChevronDown className="w-8 h-8 text-white stroke-[3] transition-transform duration-200" />
           ) : (
-            /* Stylized white speech bubble with emerald smile cutout (as seen in Screenshot 1) */
             <div className="relative flex items-center justify-center transition-transform group-hover:scale-105">
               <svg viewBox="0 0 36 36" fill="none" className="w-9 h-9">
-                {/* White speech bubble */}
                 <path
                   d="M18 4C10.268 4 4 10.268 4 18C4 20.875 4.868 23.548 6.357 25.776L5 31L10.514 29.558C12.671 31.094 15.234 32 18 32C25.732 32 32 25.732 32 18C32 10.268 25.732 4 18 4Z"
                   fill="white"
                 />
-                {/* Emerald smile cutout inside */}
                 <path
                   d="M12.5 19.5C13.8 22.8 22.2 22.8 23.5 19.5C21.8 21.4 14.2 21.4 12.5 19.5Z"
-                  fill="#00A859"
+                  fill="#254A34"
                 />
               </svg>
             </div>
@@ -461,55 +451,49 @@ export const Chatbot: React.FC = () => {
         </button>
       </div>
 
-      {/* ========================================================
-          2. CHAT POPUP WINDOW STRUCTURE
-          Styled exactly like Screenshot 2
-         ======================================================== */}
+      {/* 2. CHAT POPUP WINDOW STRUCTURE */}
       {isOpen && (
         <div
-          className="fixed bottom-22 right-3 sm:bottom-24 sm:right-6 z-50 w-[calc(100vw-1.5rem)] sm:w-[380px] h-[520px] max-h-[85vh] bg-[#F8FAFC] rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200/90 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200"
-          style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+          className="fixed bottom-22 right-3 sm:bottom-24 sm:right-6 z-50 w-[calc(100vw-1.5rem)] sm:w-[380px] h-[520px] max-h-[85vh] bg-[#F8FAFC] rounded-2xl sm:rounded-3xl shadow-2xl border border-slate-200/90 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 font-sans"
         >
-          {/* Header Bar (Solid Emerald Green #00A859) */}
-          <div className="bg-[#00A859] text-white px-4 py-3.5 flex items-center justify-between select-none shrink-0 shadow-xs relative">
-            {/* Left Title: "< Customer Support" */}
+          {/* Header Bar */}
+          <div className="bg-[#254A34] text-white px-4 py-3.5 flex items-center justify-between select-none shrink-0 shadow-xs relative">
             <button
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-1.5 font-semibold text-base sm:text-lg hover:opacity-90 transition-opacity focus:outline-none"
+              className="flex items-center gap-1.5 font-semibold text-base sm:text-lg hover:opacity-90 transition-opacity focus:outline-none cursor-pointer"
               aria-label="Collapse Customer Support"
             >
               <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
-              <span>Customer Support</span>
+              <span>CLINT BRIDGE Support</span>
             </button>
 
-            {/* Right: Hamburger / Three-dots Menu Icon */}
+            {/* Menu */}
             <div className="relative">
               <button
                 onClick={() => setShowMenu(!showMenu)}
-                className="p-1.5 rounded-lg hover:bg-black/10 transition-colors focus:outline-none"
+                className="p-1.5 rounded-lg hover:bg-black/10 transition-colors focus:outline-none cursor-pointer"
                 aria-label="Options Menu"
               >
                 <Menu className="w-5 h-5 stroke-[2.2]" />
               </button>
 
-              {/* Dropdown Menu */}
               {showMenu && (
-                <div className="absolute right-0 top-10 w-48 bg-white rounded-xl shadow-xl border border-slate-100 py-1.5 z-50 text-slate-700 text-xs animate-in fade-in duration-150">
+                <div className="absolute right-0 top-10 w-52 bg-white rounded-xl shadow-xl border border-slate-100 py-1.5 z-50 text-slate-700 text-xs animate-in fade-in duration-150">
                   <a
-                    href="https://wa.me/447517035549"
+                    href="https://wa.me/923112713755"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 px-3.5 py-2 hover:bg-slate-50 transition-colors font-medium text-emerald-700"
+                    className="flex items-center gap-2.5 px-3.5 py-2 hover:bg-slate-50 transition-colors font-medium text-[#254A34]"
                   >
                     <Phone className="w-3.5 h-3.5" />
                     <span>WhatsApp Support</span>
                   </a>
                   <a
-                    href="tel:+447517035549"
+                    href="tel:03002464078"
                     className="flex items-center gap-2.5 px-3.5 py-2 hover:bg-slate-50 transition-colors font-medium"
                   >
                     <Phone className="w-3.5 h-3.5" />
-                    <span>Call +44 7517 035549</span>
+                    <span>Call 0300-2464078</span>
                   </a>
                   <a
                     href="mailto:clintbridge595@gmail.com"
@@ -525,14 +509,14 @@ export const Chatbot: React.FC = () => {
                         {
                           id: `reset-${Date.now()}`,
                           sender: 'bot',
-                          text: '👋 Hi! How can we help you today with ClientBridge services?',
+                          text: '👋 Hi! How can we help you today with CLINT BRIDGE services?',
                           timestamp: 'Just now',
                           quickReplies: initialQuickReplies,
                         },
                       ]);
                       setShowMenu(false);
                     }}
-                    className="flex items-center gap-2.5 px-3.5 py-2 text-rose-600 hover:bg-rose-50 w-full text-left transition-colors font-medium"
+                    className="flex items-center gap-2.5 px-3.5 py-2 text-rose-600 hover:bg-rose-50 w-full text-left transition-colors font-medium cursor-pointer"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
                     <span>Restart Conversation</span>
@@ -544,30 +528,26 @@ export const Chatbot: React.FC = () => {
 
           {/* Chat Messages Area */}
           <div className="flex-1 p-4 overflow-y-auto space-y-3.5 bg-[#F8FAFC]">
-            {/* Subtle Subtitle header as seen in screenshot */}
             <div className="text-[11px] font-semibold text-slate-400 pl-11 tracking-wide uppercase">
-              Customer Support
+              CLINT BRIDGE Desk
             </div>
 
             {messages.map((msg) => (
               <div key={msg.id} className="space-y-2">
                 {msg.sender === 'bot' ? (
-                  /* Bot Message layout with Avatar on left and green bubble */
                   <div className="flex items-start gap-2.5 max-w-[92%]">
                     <SupportAvatar />
                     <div className="flex flex-col gap-1.5 flex-1">
-                      {/* Green Bubble (#00A859) with white text */}
-                      <div className="bg-[#00A859] text-white rounded-2xl rounded-tl-xs px-4 py-3 text-xs sm:text-sm font-medium leading-relaxed shadow-2xs whitespace-pre-line">
+                      <div className="bg-[#254A34] text-white rounded-2xl rounded-tl-xs px-4 py-3 text-xs sm:text-sm font-medium leading-relaxed shadow-2xs whitespace-pre-line">
                         {msg.text}
                       </div>
 
-                      {/* Optional Action CTA Link */}
                       {msg.ctaAction && (
                         <a
                           href={msg.ctaAction.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 bg-emerald-800/10 hover:bg-emerald-800/20 text-[#00A859] font-bold text-xs py-1.5 px-3.5 rounded-lg transition-colors w-fit border border-[#00A859]/30"
+                          className="inline-flex items-center gap-1.5 bg-[#C6FF1A] text-[#0F1A14] font-bold text-xs py-1.5 px-3.5 rounded-lg transition-transform hover:scale-102 w-fit shadow-xs"
                         >
                           <span>{msg.ctaAction.label}</span>
                           <ArrowUpRight className="w-3 h-3 stroke-[2.5]" />
@@ -576,7 +556,6 @@ export const Chatbot: React.FC = () => {
                     </div>
                   </div>
                 ) : (
-                  /* User Message layout aligned right */
                   <div className="flex justify-end">
                     <div className="bg-slate-800 text-white rounded-2xl rounded-tr-xs px-4 py-2.5 text-xs sm:text-sm font-medium leading-relaxed shadow-2xs max-w-[85%] whitespace-pre-line">
                       {msg.text}
@@ -591,7 +570,7 @@ export const Chatbot: React.FC = () => {
                       <button
                         key={idx}
                         onClick={() => handleQuickReply(reply)}
-                        className="border border-[#00A859] bg-white text-[#00A859] hover:bg-[#00A859] hover:text-white transition-all duration-150 rounded-full px-4 py-1.5 text-xs sm:text-[13px] font-semibold shadow-2xs text-right cursor-pointer active:scale-95"
+                        className="border border-[#254A34] bg-white text-[#254A34] hover:bg-[#254A34] hover:text-white transition-all duration-150 rounded-full px-4 py-1.5 text-xs sm:text-[13px] font-semibold shadow-2xs text-right cursor-pointer active:scale-95"
                       >
                         {reply}
                       </button>
@@ -601,14 +580,13 @@ export const Chatbot: React.FC = () => {
               </div>
             ))}
 
-            {/* Typing Indicator */}
             {isTyping && (
               <div className="flex items-center gap-2.5 pl-1">
                 <SupportAvatar size="w-7 h-7" />
                 <div className="bg-white border border-slate-200 rounded-full px-3.5 py-2 shadow-2xs flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00A859] animate-bounce" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00A859] animate-bounce [animation-delay:0.2s]" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00A859] animate-bounce [animation-delay:0.4s]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#254A34] animate-bounce" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#254A34] animate-bounce [animation-delay:0.2s]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#254A34] animate-bounce [animation-delay:0.4s]" />
                 </div>
               </div>
             )}
@@ -627,7 +605,7 @@ export const Chatbot: React.FC = () => {
                     setShowEmojiPicker(false);
                     inputRef.current?.focus();
                   }}
-                  className="hover:scale-125 transition-transform"
+                  className="hover:scale-125 transition-transform cursor-pointer"
                 >
                   {emoji}
                 </button>
@@ -642,63 +620,58 @@ export const Chatbot: React.FC = () => {
                 e.preventDefault();
                 handleSendMessage();
               }}
-              className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-3 py-1.5 focus-within:border-[#00A859] focus-within:bg-white transition-all"
+              className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-3 py-1.5 focus-within:border-[#254A34] focus-within:bg-white transition-all"
             >
               <input
                 ref={inputRef}
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                placeholder="Type here and press enter.."
+                placeholder="Type here and press enter..."
                 className="w-full text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none bg-transparent py-1 px-1"
               />
 
-              {/* Action buttons on the right */}
               <div className="flex items-center gap-1.5 shrink-0 text-slate-400">
                 {inputMessage.trim().length > 0 ? (
-                  /* Send arrow button when text is present */
                   <button
                     type="submit"
-                    className="w-7 h-7 rounded-full bg-[#00A859] hover:bg-[#00964F] text-white flex items-center justify-center transition-transform active:scale-90"
+                    className="w-7 h-7 rounded-full bg-[#254A34] hover:bg-[#1F3B2B] text-white flex items-center justify-center transition-transform active:scale-90 cursor-pointer"
                     aria-label="Send message"
                   >
                     <Send className="w-3.5 h-3.5" />
                   </button>
                 ) : (
                   <>
-                    {/* Thumbs up */}
                     <button
                       type="button"
                       onClick={handleSendThumbsUp}
-                      className="p-1 hover:text-slate-700 transition-colors"
+                      className="p-1 hover:text-slate-700 transition-colors cursor-pointer"
                       title="Send thumbs up"
                       aria-label="Send thumbs up"
                     >
                       <ThumbsUp className="w-4 h-4 stroke-[1.8]" />
                     </button>
 
-                    {/* Paperclip */}
                     <button
                       type="button"
                       onClick={() => {
                         window.open(
-                          'https://wa.me/447517035549?text=Hi%20ClientBridge,%20I%20have%20project%20files%20and%20briefs%20to%20share.',
+                          'https://wa.me/923112713755?text=Hi%20CLINT%20BRIDGE,%20I%20have%20project%20files%20and%20briefs%20to%20share.',
                           '_blank'
                         );
                       }}
-                      className="p-1 hover:text-slate-700 transition-colors"
+                      className="p-1 hover:text-slate-700 transition-colors cursor-pointer"
                       title="Attach brief / files via WhatsApp"
                       aria-label="Attach file"
                     >
                       <Paperclip className="w-4 h-4 stroke-[1.8]" />
                     </button>
 
-                    {/* Smile / Emoji */}
                     <button
                       type="button"
                       onClick={() => setShowEmojiPicker(!showEmojiPicker)}
-                      className={`p-1 transition-colors ${
-                        showEmojiPicker ? 'text-[#00A859]' : 'hover:text-slate-700'
+                      className={`p-1 transition-colors cursor-pointer ${
+                        showEmojiPicker ? 'text-[#254A34]' : 'hover:text-slate-700'
                       }`}
                       title="Insert emoji"
                       aria-label="Insert emoji"
@@ -710,12 +683,11 @@ export const Chatbot: React.FC = () => {
               </div>
             </form>
 
-            {/* Footer Attribution Pill: "Powered by ClientBridge AI" */}
             <div className="flex items-center justify-center mt-2 mb-0.5">
               <div className="inline-flex items-center gap-1.5 bg-white border border-slate-200/90 rounded-full px-3 py-0.5 shadow-2xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00A859]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#254A34]" />
                 <span className="text-[10px] text-slate-500 font-medium">
-                  Powered by <span className="font-semibold text-slate-700">ClientBridge AI</span>
+                  CLINT BRIDGE Support Desk
                 </span>
               </div>
             </div>

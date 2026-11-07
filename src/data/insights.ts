@@ -32,7 +32,7 @@ export const insights: InsightItem[] = [
     content: [
       'When someone in Karachi searches for "dental clinic near me" or "car rental in Clifton", Google displays the Maps 3-Pack before organic search results.',
       'Setting up your Google Business Profile properly with verified phone numbers, business hours, high-definition photos, and authentic reviews ensures you capture high-intent local foot traffic.',
-      'Client Bridge assists with pin verification, category optimization, and local citation synchronization to keep your business prominent.',
+      'CLINT BRIDGE assists with pin verification, category optimization, and local citation synchronization to keep your business prominent.',
     ],
   },
   {

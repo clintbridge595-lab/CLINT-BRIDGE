@@ -18,7 +18,7 @@ export const faqs: FaqItem[] = [
   {
     id: 'faq-3',
     question: 'How much does a website cost?',
-    answer: 'We believe in transparent, upfront pricing with zero hidden fees. Our Starter website package begins at PKR 20,000, our full 5-page 3D Business package is PKR 30,000, and our comprehensive Growth Partner solution is PKR 50,000. Custom enterprise solutions are quoted based on specific scope.',
+    answer: 'We believe in transparent, upfront pricing with zero hidden fees. Our Starter website package begins at PKR 30,000, our full 5-page 3D Business package is PKR 40,000, and our comprehensive Growth Partner solution is PKR 60,000. Custom enterprise solutions are quoted based on specific scope.',
   },
   {
     id: 'faq-4',

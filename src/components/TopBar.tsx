@@ -4,22 +4,24 @@ import { Phone, Mail } from 'lucide-react';
 export const TopBar: React.FC = () => {
   return (
     <div
-      className="w-full bg-[#1F3B2B] text-slate-200 text-xs px-4 sm:px-8 border-b border-[#254A34]/60 flex items-center"
-      style={{
-        height: '32.6667px',
-        fontFamily: 'Georgia',
-        fontStyle: 'italic',
-      }}
+      className="w-full bg-[#1F3B2B] text-slate-200 text-xs px-4 sm:px-8 border-b border-[#254A34]/60 flex items-center h-9 font-sans"
     >
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
         {/* Left: Contact Info (Phone and Email only) */}
         <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
           <a
-            href="tel:03112713755"
+            href="tel:03002464078"
             className="flex items-center gap-1.5 hover:text-[#C6FF1A] transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-[#C6FF1A]" />
-            <span className="font-medium tracking-wide">0311-2713755</span>
+            <span className="font-medium tracking-wide">0300-2464078</span>
+          </a>
+
+          <a
+            href="tel:03212114972"
+            className="hidden sm:flex items-center gap-1.5 hover:text-[#C6FF1A] transition-colors text-slate-300"
+          >
+            <span className="font-medium tracking-wide">0321-2114972</span>
           </a>
 
           <a
