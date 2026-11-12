@@ -9,7 +9,6 @@ import {
   MessageSquare,
   BarChart3,
   ArrowRight,
-  Sparkles,
   CheckCircle2,
 } from 'lucide-react';
 
@@ -105,13 +104,6 @@ export const DigitalGrowthPartner: React.FC<DigitalGrowthPartnerProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 bg-[#254A34] border border-[#31503D] px-4 py-1.5 rounded-full mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#C6FF1A]" />
-            <span className="text-xs font-bold uppercase tracking-widest text-[#C6FF1A]">
-              Your Complete Digital Growth Partner
-            </span>
-          </div>
-
           <h2 className="font-serif italic text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8F9FA] tracking-tight leading-[1.14] mb-6 text-balance">
             Everything Your Business Needs to Grow Online —{' '}
             <span className="text-[#C6FF1A]">All Under One Roof.</span>

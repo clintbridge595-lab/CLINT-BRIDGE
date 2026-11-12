@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Clock,
   ShieldCheck,
-  Sparkles,
   Info,
   Globe,
   Smartphone,
@@ -64,13 +63,6 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#254A34] border border-[#31503D] px-4 py-1.5 rounded-full mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#C6FF1A]" />
-            <span className="text-xs font-bold uppercase tracking-widest text-[#C6FF1A]">
-              Transparent Agency Investments
-            </span>
-          </div>
-
           <h2 className="font-serif italic text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F8F9FA] tracking-tight leading-[1.15] mb-4 text-balance">
             Predictable Pricing. Complete Business Outcomes.
           </h2>
@@ -113,16 +105,8 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
                 </p>
               </div>
 
-              <div className="lg:col-span-5 flex flex-col lg:items-end justify-start">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-base font-bold uppercase tracking-wider text-[#C6FF1A]">
-                    {flagshipPackage.currency}
-                  </span>
-                  <span className="font-sans text-5xl sm:text-6xl font-black text-white tracking-tight tabular-nums">
-                    {flagshipPackage.price}
-                  </span>
-                </div>
-                <div className="text-xs text-slate-300 font-medium mt-1">
+              <div className="lg:col-span-5 flex flex-col lg:items-end justify-center">
+                <div className="text-xs text-slate-300 font-medium">
                   {flagshipPackage.billingType} · Fixed Contract
                 </div>
 
@@ -135,7 +119,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
                       'PKR 200,000 (Complete Digital Growth)'
                     )
                   }
-                  className="mt-6 group inline-flex items-center gap-3 bg-[#C6FF1A] hover:bg-[#b8f014] text-[#0F1A14] text-sm sm:text-base font-extrabold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95 cursor-pointer w-full sm:w-auto justify-center"
+                  className="mt-4 group inline-flex items-center gap-3 bg-[#C6FF1A] hover:bg-[#b8f014] text-[#0F1A14] text-sm sm:text-base font-extrabold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95 cursor-pointer w-full sm:w-auto justify-center"
                 >
                   <span>{flagshipPackage.ctaText}</span>
                   <span className="w-6 h-6 rounded-full bg-[#0F1A14] text-[#C6FF1A] flex items-center justify-center transition-transform group-hover:translate-x-1">
@@ -196,7 +180,9 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300 leading-relaxed font-sans">
-                {flagshipPackage.conditions.map((cond: string, cIdx: number) => (
+                {flagshipPackage.conditions
+                  .filter((cond: string) => !cond.toLowerCase().includes('package price'))
+                  .map((cond: string, cIdx: number) => (
                   <div key={cIdx} className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#C6FF1A] shrink-0 mt-1.5" />
                     <span>{cond}</span>
@@ -256,17 +242,9 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
                       </p>
                     </div>
 
-                    {/* Price Block */}
+                    {/* Billing Block */}
                     <div className="mb-6 pb-6 border-b border-dashed border-white/20">
-                      <div className="flex items-baseline gap-1.5">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#C6FF1A]">
-                          {plan.currency}
-                        </span>
-                        <span className="font-sans text-4xl sm:text-5xl font-black text-white tracking-tight tabular-nums">
-                          {plan.price}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-1.5 mt-2">
+                      <div className="flex items-center gap-1.5">
                         <ShieldCheck className="w-3.5 h-3.5 text-[#C6FF1A]" />
                         <span className="text-xs font-medium text-slate-300">
                           {plan.billingType} · Zero Hidden Fees

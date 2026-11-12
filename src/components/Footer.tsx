@@ -184,8 +184,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#254A34] shrink-0" />
-                <a href="mailto:clintbridge595@gmail.com" className="hover:text-[#254A34] transition-colors">
-                  clintbridge595@gmail.com
+                <a href="mailto:clientbridge.pakistan@gmail.com" className="hover:text-[#254A34] transition-colors">
+                  clientbridge.pakistan@gmail.com
                 </a>
               </li>
 
@@ -273,7 +273,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     <strong>2. Confidentiality & Data Use:</strong> Your information is used strictly to evaluate your project requirements, prepare project proposals, and maintain client communications. CLINT BRIDGE never sells, rents, or discloses client data to third parties.
                   </p>
                   <p>
-                    <strong>3. Secure Communications:</strong> Client communications occur directly via verified official channels (+92 300 2464078, +92 321 2114972, and clintbridge595@gmail.com).
+                    <strong>3. Secure Communications:</strong> Client communications occur directly via verified official channels (+92 300 2464078, +92 321 2114972, and clientbridge.pakistan@gmail.com).
                   </p>
                 </div>
               </div>
