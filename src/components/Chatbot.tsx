@@ -224,7 +224,7 @@ export const Chatbot: React.FC = () => {
     ) {
       return {
         reply:
-          'You can connect with the CLINT BRIDGE team directly:\n\n📱 Primary Line: 0300-2464078\n📞 Direct Line: 0321-2114972\n✉️ Email: clientbridge.pakistan@gmail.com\n📍 Location: Karachi, Pakistan\n\nWe respond to all direct inquiries promptly!',
+          'You can connect with the CLINT BRIDGE team directly:\n\n📱 Primary Line: 0300-2464078\n📞 Direct Line: 0321-2114972\n✉️ Email: official.clientbridge@gmail.com\n📍 Location: Karachi, Pakistan\n\nWe respond to all direct inquiries promptly!',
         quickReplies: [
           'Open WhatsApp Now',
           'Get a Free Quote',
@@ -496,7 +496,7 @@ export const Chatbot: React.FC = () => {
                     <span>Call 0300-2464078</span>
                   </a>
                   <a
-                    href="mailto:clientbridge.pakistan@gmail.com"
+                    href="mailto:official.clientbridge@gmail.com"
                     className="flex items-center gap-2.5 px-3.5 py-2 hover:bg-slate-50 transition-colors font-medium"
                   >
                     <Mail className="w-3.5 h-3.5" />

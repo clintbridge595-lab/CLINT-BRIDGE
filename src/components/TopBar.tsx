@@ -25,11 +25,11 @@ export const TopBar: React.FC = () => {
           </a>
 
           <a
-            href="mailto:clientbridge.pakistan@gmail.com"
+            href="mailto:official.clientbridge@gmail.com"
             className="flex items-center gap-1.5 hover:text-[#C6FF1A] transition-colors"
           >
             <Mail className="w-3.5 h-3.5 text-[#C6FF1A]" />
-            <span className="font-medium">clientbridge.pakistan@gmail.com</span>
+            <span className="font-medium">official.clientbridge@gmail.com</span>
           </a>
         </div>
 
